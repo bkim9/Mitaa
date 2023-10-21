@@ -1,0 +1,59 @@
+/* header */
+header {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: rgba(16, 16, 63, 0.928);
+    height: 4rem;
+}
+
+#navbar-container {
+    display: flex;
+}
+
+#navbar-container ul {
+    display: flex;
+    align-items: center;
+    padding:1rem;
+    list-style-type: none;
+}
+
+#navbar-container li {
+    padding:.5rem;
+}
+
+a {
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header button {
+    padding: .2rem;
+    width: 10rem;
+    font-size: large;
+    background-color: rgba(255, 255, 255, 0.2);
+    color:white;
+    border: none;
+    border-radius: 0.5rem;    
+}
+
+footer {
+    background-color: rgba(16, 16, 63, 0.928);
+    padding: 1rem;
+    color: white;
+    height: 10rem;
+}
+footer address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    align-items:center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}

@@ -5,72 +5,49 @@
   <head>
     <meta chartset="UTF-8" />
     <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headerfooter.css">
   </head>
   <body>
     <!-- Header holds logo and appname -->
     <header>
+      <div id="logo-container">
         <img class="logo" src="./images/logo.svg" alt="logo" />
-        <button>Patient Referral</button>
-    </header>
+      </div>
+      <div id="navbar-container">
+        <ul id="nav-bar">
+          <li><a href=".">Home</a></li>
+          <li><a href="./bio.html">Bio</a></li>
+          <li><a href=".">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./tms.html">TMS</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <button onclick="location.href='./referral.html'">Patient Referral</button>
+      </div>
+  </header>
     <main>
-        <h1>Mitaa Memory Clinic</h1>
-        <h2>FDA Approved</h2>
-        <button>Contacts</button>
+        <h1>Referral</h1>
+        <form id="patient-form" action="/submit-p-form" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+        <form id="doctor-form" action="/submit-d-form" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <input type="submit" value="Submit">
+        </form>
     </main>
-
-    <h2>PATIENT REFERRAL</h2>
-    <p>Please fill out the  form below and a member of the NBII Referrals will contact you via email regarding details. Once all necessary items are received, our Scheduling Team will contact and schedule the patient.</p>
-    <form>
-        <h3>Patient Information</h3>
-        <label for="today">Todays Date (MM/DD/YY)</label>
-        <input type="date" id="today" name="today">
-
-        <label for="fname">Patient First Name *</label>
-        <input type="text" id="fname" name="fname" value="John">
-
-        <label for="lname">Patient Last Name *</label>
-        <input type="text" id="lname" name="lname" value="Doe">
-        
-        <label for="email">Patient Email</label>
-        <input type="email" id="email" name="email">
-
-        <label for="phone">Patient Phone Number</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-
-        <label for="gender">Gender</label>
-        <input type="checkbox" id="gender1" name="gender1" value="male">
-        <input type="checkbox" id="gender2" name="gender2" value="female">
-
-        <label for="today">Date of Birth (MM/DD/YY)</label>
-        <input type="date" id="birthday" name="birthday">
-
-        <label for="lawname">Law Firm Name</label>
-        <input type="text" id="lawname" name="lawname" value="Lawfirmname">
-
-        <label for="lawphone">Law Firm Phone Number</label>
-        <input type="tel" id="lawphone" name="lawphone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-
-        <label for="drname">Referring Doctor Name</label>
-        <input type="text" id="lawname" name="lawname" value="Lawfirmname">
-
-        <label for="lawphone">Referring Doctor Phone Number</label>
-        <input type="tel" id="lawphone" name="lawphone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-
-        <label for="dremail">Referring Doctor Email</label>
-        <input type="email" id="dremail" name="dremail">
-
-        <label for="atname">Attorney Name</label>
-        <input type="text" id="lawname" name="lawname" value="Lawfirmname">
-
-        <input type="submit" value="Submit">
-    </form>
-
-
     <footer>
         <address id="contacts">
-            Los Angeles <br>
-            <a href="mailto:memory@mitaa.com">kbs@mitaa.com</a> <br>
-            <a href="tel:+1000-000-0000">000-000-0000</a>
+            <p>3700 Wilshire Blvd, Suite 200, Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a> <br>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
         </address>
     </footer>
   </body>
