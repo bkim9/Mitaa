@@ -1,0 +1,10 @@
+#conv-button {
+    display: flex;    
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: rgba(16, 16, 63, 1);
+    color: white;
+}
