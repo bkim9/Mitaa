@@ -1,0 +1,40 @@
+{
+    "risk_factors": [
+        "Vit B12",
+        "Stroke",
+        "Trauma",
+        "Thyroid",
+        "Syphilis",
+        "Other infection, HIV Etc..",
+        "Female",
+        "Family History",
+        "Age",
+        "ApoE4",
+        "High Humocysteine Level",
+        "Smoke",
+        "HTN/D.M",
+        "Cholesterol",
+        "Diabetes",
+        "Social Isolation",
+        "Medications side Effect"
+    ],
+    "memoryclinic": [
+        "Dr.Cho's evaluation for Memory loss",
+        "Special Lab test and PET Scan",
+        "2 weeks later meet Dr.Cho",
+        "3 weeks Dr.Cho Treatment plans",
+        "Syphilis",
+        "Other infection, HIV Etc..",
+        "Female",
+        "Family History",
+        "Age",
+        "ApoE4",
+        "High Humocysteine Level",
+        "Smoke",
+        "HTN/D.M",
+        "Cholesterol",
+        "Diabetes",
+        "Social Isolation",
+        "Medications side Effect"
+    ]
+}
