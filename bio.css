@@ -1,0 +1,67 @@
+
+
+#upper-bio {
+    font-size: x-large;
+}
+
+#lower-bio {
+    display: flex;
+    width: 90rem;
+}
+
+#lower-bio img {
+    margin: 2.5rem;
+    border-style: solid;
+}
+
+#job-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+#job-desc  * { 
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: xx-large;
+}
+
+#job-desc span {
+    font-size: x-large
+}
+
+#partners-title {
+    height: 5rem;
+    font-size: 3rem;
+}
+
+#partners {
+    display: flex;
+    flex-direction: row;
+    width: 80rem;
+}
+
+#partners * {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    object-fit: contain;
+}
+
+#cedars-logo{
+    margin-right: -7rem;
+    width: 40rem;
+}
+
+#ucla-logo{
+    margin: 0 -5rem;
+    width: 30rem;
+}
+
+#other-logo{
+    margin-left: -5rem;
+    width: 30rem;
+}

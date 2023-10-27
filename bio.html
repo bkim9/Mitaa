@@ -7,6 +7,9 @@
     <title>Mitaa Memory Clinic</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="bio.css">
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
   </head>
   <body>
     <!-- Header holds logo and appname -->
@@ -27,22 +30,79 @@
         </div>
     </header>
     <main>
-        <h1>Bio</h1>
-        <img src="img/person.jpg">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet facilisis magna etiam tempor orci. Non arcu risus quis varius quam quisque id diam vel. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Orci a scelerisque purus semper eget. Pulvinar mattis nunc sed blandit. Convallis convallis tellus id interdum velit laoreet id. Ipsum dolor sit amet consectetur adipiscing elit. Aliquet nibh praesent tristique magna. Arcu felis bibendum ut tristique et. Ridiculus mus mauris vitae ultricies leo integer malesuada. Amet est placerat in egestas. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Leo duis ut diam quam.
+        <div id="under-nav">
+          <h1>Kyung K. Cho, MD</h1>
+          <h2>Specialist Epilepsy, Cedar Sinai Staff</h2>
+        </div>
+        <div id="lower-bio">
+          <img src="img/person.jpg" id="bio-img">
+          <div id="job-desc">
+            <h3>simple job</h3>
+            <hr />
+            <span id="desc">
+              Dr. Cho is a distinguished and highly respected figure in the field of neurology, with over 35 years of unwavering commitment to providing exceptional patient care and advancing the understanding and treatment of neurological conditions. As a board-certified neurologist and double-board certified epilepsy specialist, Dr. Cho's expertise spans a wide spectrum, reflecting his unparalleled dedication to improving the lives of those he serves.
+              Dr. Kyung Cho, MD is a neurology specialist in Los Angeles, CA and has over 44 years of experience in the medical field. He graduated from SEOUL NATIONAL UNIVERSITY / COLLEGE OF MEDICINE in 1978.
+            </span>
+          </div>          
+        </div>
+        <h3 id="partners-title">
+          Our Partners
+        </h3>
+        <div id="partners">
+          <img id="cedars-logo" src="./img/cedarsSinailogo.png" href="https://www.cedars-sinai.org/home.html">
+          <img id="ucla-logo" src="./img/cedarsSinailogo.png">
+          <img id="other-logo" src="./img/cedarsSinailogo.png">
+        </div>
 
-            Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Penatibus et magnis dis parturient. Et netus et malesuada fames. Sit amet est placerat in egestas erat. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Aenean pharetra magna ac placerat vestibulum lectus mauris. Nulla facilisi etiam dignissim diam quis enim. Lectus proin nibh nisl condimentum id venenatis a condimentum vitae. Nulla pellentesque dignissim enim sit. Massa vitae tortor condimentum lacinia quis vel. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Egestas maecenas pharetra convallis posuere morbi leo urna. Consectetur purus ut faucibus pulvinar elementum integer. Facilisis magna etiam tempor orci eu lobortis elementum nibh. Tellus elementum sagittis vitae et leo duis. Eget mauris pharetra et ultrices neque ornare. Augue eget arcu dictum varius. Sit amet risus nullam eget felis eget. Non consectetur a erat nam at lectus urna duis.
-            
-            Cursus risus at ultrices mi. Phasellus vestibulum lorem sed risus ultricies tristique. Sit amet consectetur adipiscing elit duis. Leo vel orci porta non pulvinar. Sit amet porttitor eget dolor morbi non arcu. Neque gravida in fermentum et sollicitudin ac orci phasellus egestas. Posuere urna nec tincidunt praesent semper. In metus vulputate eu scelerisque. Duis at consectetur lorem donec massa sapien faucibus et. Semper risus in hendrerit gravida rutrum quisque. Venenatis cras sed felis eget velit aliquet. In mollis nunc sed id semper risus in hendrerit gravida. Diam quis enim lobortis scelerisque. Leo urna molestie at elementum eu facilisis sed. Cursus turpis massa tincidunt dui.
-            
-            Pretium lectus quam id leo. Venenatis cras sed felis eget velit aliquet sagittis id. Volutpat odio facilisis mauris sit amet. Duis tristique sollicitudin nibh sit. Sed augue lacus viverra vitae. Bibendum est ultricies integer quis auctor elit sed vulputate. A condimentum vitae sapien pellentesque. At augue eget arcu dictum varius duis at. Habitant morbi tristique senectus et netus et. At risus viverra adipiscing at in tellus. Fames ac turpis egestas sed tempus urna et pharetra pharetra. Vitae justo eget magna fermentum iaculis. Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Euismod elementum nisi quis eleifend quam adipiscing vitae. Pellentesque nec nam aliquam sem et tortor.
-            
-            Luctus accumsan tortor posuere ac ut consequat semper. Quam viverra orci sagittis eu. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Ultricies lacus sed turpis tincidunt id. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus in. Felis donec et odio pellentesque. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida. Pellentesque sit amet porttitor eget dolor. Hendrerit dolor magna eget est lorem ipsum. Nisl nisi scelerisque eu ultrices vitae. Amet venenatis urna cursus eget nunc.</p>
+
+        <dialog id="conv-dialog">
+          <button id="conv-close-button">x</button>
+          <div id="dialog-header">
+              <h3>Contact Us</h3>
+          </div>
+          <form id="contact-form" action="/submit-p-form" method="dialog">
+              <select>
+                  <option value="default">  Location</option>
+                  <option>Los Angeles</option>
+                  <option>UCLA</option>
+                  <option>New York</option>
+              </select>
+              <select>
+                  <option value="default">  Returning Patient?</option>
+                  <option>Yes, I am returning</option>
+                  <option>No, I am a new patient</option>
+              </select>
+              <input type="text" id="name" name="name" placeholder="Full Name">
+              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+              <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+              <input id="conv-submit-button" type="submit" value="Submit">
+          </form>
+          <p id="contact-warning">
+              By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+          </p>
+      </dialog>
+        
+        <button id="conv-button">
+          <svg
+              viewBox="-10 -14 44 70" 
+              width="100" height="100"
+              fill-rule="evenodd" 
+              clip-rule="evenodd">
+              <path 
+                  stroke="rgba(255, 255, 255, 1)" 
+                  stroke-width="1.5" 
+                  d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+              />
+          </svg>
+      </button>
+
     </main>
     <footer>
         <address id="contacts">
-            <p>3700 Wilshire Blvd, Suite 200, Los Angeles, CA 90010 <br /></p>
-            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a> <br>
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
             <a href="tel:+1213-487-3060">213-487-3060</a>
         </address>
     </footer>

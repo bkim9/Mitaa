@@ -42,6 +42,17 @@ header button {
     border-radius: 0.5rem;    
 }
 
+#under-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(16, 16, 63, 0.7);
+    color: white;
+    width: 100%;
+    height: 15rem;
+}
+
 footer {
     background-color: rgba(16, 16, 63, 0.928);
     padding: 1rem;
