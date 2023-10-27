@@ -3,6 +3,17 @@
     ,
     "drko_bio": "."
     ,
+    "check_list_alzheimer": [
+        "History and Physical",
+        "MoCA",
+        "Lab tests(Vitamin B12 and thyroid panel)",
+        "Medication List",
+        "MRI of Brain report",
+        "Biomarkers",
+        "Beta Amiloid PET Scan",
+        "APoE4 status"
+    ] 
+    ,
     "risk_factors": [
         "Vit B12",
         "Stroke",

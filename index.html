@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headerfooter.css">
     <link rel="stylesheet" href="person-card.css">
+    <link rel="stylesheet" href="conv-button.css">
+    <script src="conv-dialog.js"></script>
   </head>
   <body>
     <!-- Header holds logo and appname -->
@@ -115,9 +117,50 @@
 
 
 
-        <button id="inquiry-button">
-          <i class="fas fa-clock" style="font-size:24px;"></i>
-        </button>
+        <dialog id="conv-dialog">
+          <button id="conv-close-button">x</button>
+          <div id="dialog-header">
+              <h3>Contact Us</h3>
+          </div>
+          <form id="contact-form" action="/submit-p-form" method="dialog">
+              <select>
+                  <option value="default">  Location</option>
+                  <option>Los Angeles</option>
+                  <option>UCLA</option>
+                  <option>New York</option>
+              </select>
+              <select>
+                  <option value="default">  Returning Patient?</option>
+                  <option>Yes, I am returning</option>
+                  <option>No, I am a new patient</option>
+              </select>
+              <input type="text" id="name" name="name" placeholder="Full Name">
+              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+              <input type="text" id="message" name= "message" placeholder="Message">
+              <input id="conv-submit-button" type="submit" value="Submit">
+          </form>
+          <p id="contact-warning">
+              By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+          </p>
+      </dialog>6
+        
+      <button id="conv-button">
+          <svg
+              viewBox="-10 -24 44 70" 
+              width="100" height="100"
+              fill-rule="evenodd" 
+              clip-rule="evenodd">
+              <path 
+                  stroke="rgba(255, 255, 255, 1)" 
+                  stroke-width="2" 
+                  d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+              />
+          </svg>
+      </button>
+  
+
+
     </main>
     <footer>
         <address id="contacts">
