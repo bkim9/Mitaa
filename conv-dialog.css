@@ -77,6 +77,9 @@
 #contact-form input {
     width:25rem;
 }
+#contact-form textarea {
+    width:25rem;
+}
 
 #contact-form input[type=submit] {
     width: 100%;
