@@ -2,12 +2,14 @@
 
 .person-cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 
 
 .person-card {
+    margin: 1rem;
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
