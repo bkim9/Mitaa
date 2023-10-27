@@ -1,0 +1,206 @@
+<!-- Powered and made by Beomsu Kim in 102723 -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <meta name="author" content="Beomsu Kim">
+    <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="person-card.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+        <div id="logo-container">
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+        </div>
+        <div id="navbar-container">
+          <ul id="nav-bar">
+            <li><a href=".">Home</a></li>
+            <li><a href="./bio.html">Bio</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./tms.html">TMS</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+          <button onclick="location.href='./referral.html'">Patient Referral</button>
+        </div>
+    </header>
+    <main>
+      <!-- under-nav -->
+      <div id="under-nav">
+        <h1>About</h1>
+        <h2>Related sources. Telehealth available</h2>
+      </div>
+      <!-- Procedure -->
+      <h2>Procedure</h2>
+      <div class="steps-container">
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step1" />  <figcaption>step 1</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step2">  <figcaption>step 2</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step3">  <figcaption>step 3</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step4">  <figcaption>step 4</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step5">  <figcaption>step 5</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step6">  <figcaption>step 6</figcaption>
+        </div>
+      </div>
+
+
+      <h2>Services</h2>
+      <ul id="services">
+        <li class="service-element">
+          <div class="service" id="service1"><img src="./img/person.jpg" alt="Alzheimer prevention" >
+          </div>
+          <p>Alzheimer</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service2"><img src="./img/person.jpg" alt="Epilepsy clinic" >
+          </div>
+          <p>Epilepsy clinic</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service3"><img src="./img/person.jpg" alt="Epilepsy clinic0" >
+          </div>
+          <p>TMS</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service4"><img src="./img/person.jpg" alt="Epilepsy clinic1" >
+          </div>
+          <p>Headaches</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service5"><img src="./img/person.jpg" alt="Epilepsy clinic2" >
+          </div>
+          <p>Deperssion</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service6"><img src="./img/person.jpg" alt="Epilepsy clinic3" >
+          </div>
+          <p>Confusion Treatement</p>
+        </li>
+
+
+      </ul>
+
+      <h2>Our Providers</h2>
+      <ul class="person-cards">
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name0, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name1, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name2, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name3, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name4, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+      </ul>
+
+
+
+      <dialog id="conv-dialog">
+          <button id="conv-close-button">x</button>
+          <div id="dialog-header">
+              <h3>Contact Us</h3>
+          </div>
+          <form id="contact-form" action="/submit-p-form" method="dialog">
+              <select>
+                  <option value="default">  Location</option>
+                  <option>Los Angeles</option>
+                  <option>UCLA</option>
+                  <option>New York</option>
+              </select>
+              <select>
+                  <option value="default">  Returning Patient?</option>
+                  <option>Yes, I am returning</option>
+                  <option>No, I am a new patient</option>
+              </select>
+              <input type="text" id="name" name="name" placeholder="Full Name">
+              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+              <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+              <input id="conv-submit-button" type="submit" value="Submit">
+          </form>
+          <p id="contact-warning">
+              By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+          </p>
+      </dialog>
+        
+      <button id="conv-button">
+          <svg
+              viewBox="-10 -14 44 70" 
+              width="100" height="100"
+              fill-rule="evenodd" 
+              clip-rule="evenodd">
+              <path 
+                  stroke="rgba(255, 255, 255, 1)" 
+                  stroke-width="1.5" 
+                  d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+              />
+          </svg>
+      </button>
+  
+
+
+    </main>
+    <footer>
+        <address id="contacts">
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
+        </address>
+    </footer>
+  </body>
+</html>
