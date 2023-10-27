@@ -29,13 +29,13 @@ header {
 header a {
     color: white;
     text-decoration: none;
-    font-size: large;
+    font-size: x-large;
 }
 
 header button {
-    padding: .2rem;
-    width: 10rem;
-    font-size: large;
+    padding: .2rem .4rem;
+    width: 12rem;
+    font-size: x-large;
     background-color: rgba(255, 255, 255, 0.2);
     color:white;
     border: none;
@@ -52,11 +52,14 @@ footer address {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 100%;
     text-decoration: none;
     align-items:center;
+    font-size: x-large;
 }
 
 footer a {
     color: white;
     text-decoration: none;
+    font-size: x-large;
 }
