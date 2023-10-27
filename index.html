@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headerfooter.css">
     <link rel="stylesheet" href="person-card.css">
+    <link rel="stylesheet" href="service.css">
     <link rel="stylesheet" href="conv-dialog.css">
     <script src="conv-dialog.js"></script>
   </head>
@@ -31,93 +32,127 @@
     </header>
     <main>
 
-        <div src="./img/brain.jpg" alt="title_image_box" id="title-img-box">
-          <div class="title-box">
-            <h1>JKC Memory & Epilepsy Clinic</h1>
-            <h2>The Best Service. The Best Practice.
-            </h2>
-            <button>Contacts</button>
-          </div>
+      <div src="./img/brain.jpg" alt="title_image_box" id="title-img-box">
+        <div class="title-box">
+          <h1>JKC Memory & Epilepsy Clinic</h1>
+          <h2>The Best Service. The Best Practice.
+          </h2>
+          <button>Contacts</button>
         </div>
-        
-        <!-- Procedure -->
-        <h2>Procedure</h2>
-        <div class="steps-container">
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step1" />  <figcaption>step 1</figcaption>
-          </div>
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step2">  <figcaption>step 2</figcaption>
-          </div>
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step3">  <figcaption>step 3</figcaption>
-          </div>
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step4">  <figcaption>step 4</figcaption>
-          </div>
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step5">  <figcaption>step 5</figcaption>
-          </div>
-          <div class="step-container">
-            <img class="steps-img" src="./img/brain.jpg" alt="step6">  <figcaption>step 6</figcaption>
-          </div>
+      </div>
+      
+      <!-- Procedure -->
+      <h2>Procedure</h2>
+      <div class="steps-container">
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step1" />  <figcaption>step 1</figcaption>
         </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step2">  <figcaption>step 2</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step3">  <figcaption>step 3</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step4">  <figcaption>step 4</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step5">  <figcaption>step 5</figcaption>
+        </div>
+        <div class="step-container">
+          <img class="steps-img" src="./img/brain.jpg" alt="step6">  <figcaption>step 6</figcaption>
+        </div>
+      </div>
 
 
-        <h2>Services</h2>
-
-        <h2>Our Providers</h2>
-        <ul class="person-cards">
-          <li class="person-card">
-            <img src="./img/person.jpg" class="person-img">
-            <div class="person-info">
-                <p class="person-name">Name0, MD</p>
-                <p class="person-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
-                </p>
-            </div>
-          </li>
-          <li class="person-card">
-            <img src="./img/person.jpg" class="person-img">
-            <div class="person-info">
-                <p class="person-name">Name1, MD</p>
-                <p class="person-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
-                </p>
-            </div>
-          </li>
-          <li class="person-card">
-            <img src="./img/person.jpg" class="person-img">
-            <div class="person-info">
-                <p class="person-name">Name2, MD</p>
-                <p class="person-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
-                </p>
-            </div>
-          </li>
-          <li class="person-card">
-            <img src="./img/person.jpg" class="person-img">
-            <div class="person-info">
-                <p class="person-name">Name3, MD</p>
-                <p class="person-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
-                </p>
-            </div>
-          </li>
-          <li class="person-card">
-            <img src="./img/person.jpg" class="person-img">
-            <div class="person-info">
-                <p class="person-name">Name4, MD</p>
-                <p class="person-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
-                </p>
-            </div>
-          </li>
-        </ul>
+      <h2>Services</h2>
+      <ul id="services">
+        <li class="service-element">
+          <div class="service" id="service1"><img src="./img/person.jpg" alt="Alzheimer prevention" >
+          </div>
+          <p>Alzheimer</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service2"><img src="./img/person.jpg" alt="Epilepsy clinic" >
+          </div>
+          <p>Epilepsy clinic</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service3"><img src="./img/person.jpg" alt="Epilepsy clinic0" >
+          </div>
+          <p>TMS</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service4"><img src="./img/person.jpg" alt="Epilepsy clinic1" >
+          </div>
+          <p>Epilepsy clinic1</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service5"><img src="./img/person.jpg" alt="Epilepsy clinic2" >
+          </div>
+          <p>Epilepsy clinic2</p>
+        </li>
+        <li class="service-element">
+          <div class="service" id="service6"><img src="./img/person.jpg" alt="Epilepsy clinic3" >
+          </div>
+          <p>Epilepsy clinic3</p>
+        </li>
 
 
+      </ul>
 
-        <dialog id="conv-dialog">
+      <h2>Our Providers</h2>
+      <ul class="person-cards">
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name0, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name1, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name2, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name3, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+        <li class="person-card">
+          <img src="./img/person.jpg" class="person-img">
+          <div class="person-info">
+              <p class="person-name">Name4, MD</p>
+              <p class="person-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod t
+              </p>
+          </div>
+        </li>
+      </ul>
+
+
+
+      <dialog id="conv-dialog">
           <button id="conv-close-button">x</button>
           <div id="dialog-header">
               <h3>Contact Us</h3>
@@ -143,7 +178,7 @@
           <p id="contact-warning">
               By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
           </p>
-      </dialog>6
+      </dialog>
         
       <button id="conv-button">
           <svg
