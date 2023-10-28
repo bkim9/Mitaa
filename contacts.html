@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="map-card.css">
+    <link rel="stylesheet" href="contacts.css">
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+        <div id="logo-container">
+          <img class="logo" src="./images/logo.svg" alt="logo" />
+        </div>
+        <div id="navbar-container">
+          <ul id="nav-bar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./bio.html">Bio</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./tms.html">TMS</a></li>
+            <li><a href="./contacts.html">Contacts</a></li>
+          </ul>
+          <button onclick="location.href='./referral.html'">Patient Referral</button>
+        </div>
+    </header>
+    <main>        
+      <div id="under-nav">
+        <h1>Contacts</h1>
+        <h2>3700 Wilshire Blvd Suite 200, 90010</h2>
+      </div>
+      <div class="map-cards">
+        <div class="map-card" id="map-card1">
+          <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+          <div class="map-contact">
+            <div class="tel-container">
+              <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+            </div>
+            <div class="book-container">
+              <span class="book-online" onclick="alert('book online')">
+                Book Online
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="map-card" id="map-card2">
+          <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+          <div class="map-contact">
+            <div class="tel-container">
+              <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+            </div>
+            <div class="book-container">
+              <span class="book-online" onclick="alert('book online')">
+                Book Online
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card" id="map-card3">
+          <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+          <div class="map-contact">
+            <div class="tel-container">
+              <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+            </div>
+            <div class="book-container">
+              <span class="book-online" onclick="alert('book online')">
+                Book Online
+              </span>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="map-card" id="map-card4">
+        <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+        <div class="map-contact">
+          <div class="tel-container">
+            <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+          </div>
+          <div class="book-container">
+            <span class="book-online" onclick="alert('book online')">
+              Book Online
+            </span>
+          </div>
+
+        </div>
+      </div>
+      <div class="map-card" id="map-card5">
+        <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+        <div class="map-contact">
+          <div class="tel-container">
+            <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+          </div>
+          <div class="book-container">
+            <span class="book-online" onclick="alert('book online')">
+              Book Online
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="map-card" id="map-card6">
+        <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+        <div class="map-contact">
+          <div class="tel-container">
+            <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
+          </div>
+          <div class="book-container">
+            <span class="book-online" onclick="alert('book online')">
+              Book Online
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      </div>
+
+      <!-- Contact Form -->
+      <div id="form-header">
+          <h3>Contact Us</h3>
+      </div>
+      <form id="form-contact" action="/submit-p-form" method="get">
+          <div id="form-left">
+            <select>
+              <option value="default">  Location</option>
+              <option>Los Angeles</option>
+              <option>UCLA</option>
+              <option>New York</option>
+            </select>
+            <select>
+                <option value="default">  Returning Patient?</option>
+                <option>Yes, I am returning</option>
+                <option>No, I am a new patient</option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="Full Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+          </div>
+
+          <div id="form-right">
+            <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+            <input type="checkbox" id="consent-form" name="consent-form" />
+            <label for="consent-form">I understand and agree that any information submitted will be forwarded to our office by email and not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form.</label>
+            <input id="conv-submit-button" type="submit" value="Submit">
+          </div>
+      </form>
+    </main>
+    <footer>
+        <address id="contacts">
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
+        </address>
+    </footer>
+  </body>
+</html>
