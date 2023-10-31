@@ -6,12 +6,14 @@
 
 #lower-bio {
     display: flex;
-    width: 90rem;
+    flex-direction: column;
+    width: 100rem;
 }
 
 #lower-bio img {
     margin: 2.5rem;
-    border-style: solid;
+    border-radius: .5rem;
+    /* border-style: solid; */
 }
 
 #job-desc {
@@ -32,6 +34,7 @@ h3 {
 }
 
 #partners-title {
+    margin-top: 2.5rem;
     height: 5rem;
     font-size: 3rem;
 }
@@ -52,16 +55,16 @@ h3 {
 }
 
 #cedars-logo{
-    margin-right: -7rem;
-    width: 40rem;
+    margin: 1.5rem 1rem;
+    width: 30rem;
 }
 
 #ucla-logo{
-    margin: 0 -5rem;
+    margin: 1.5rem 1rem;
     width: 30rem;
 }
 
 #other-logo{
-    margin-left: -5rem;
-    width: 30rem;
+    margin: 1.5rem 1rem;
+    width: 10rem;
 }
