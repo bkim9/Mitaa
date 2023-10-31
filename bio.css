@@ -6,14 +6,15 @@
 
 #lower-bio {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 100rem;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.2));
 }
 
 #lower-bio img {
     margin: 2.5rem;
     border-radius: .5rem;
-    /* border-style: solid; */
+    width: 50rem;
 }
 
 #job-desc {
