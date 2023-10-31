@@ -7,6 +7,8 @@
     <title>Mitaa Memory Clinic</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
     <link rel="stylesheet" href="tms.css">
   </head>
   <body>
@@ -29,22 +31,80 @@
     </header>
     <main>
         <div id="under-nav">
-          <h1>Transcranial Magnetic Treatment</h1>
-          <h2>TMS safe treatment</h2>
+          <h1>TMS</h1>
+          <h2>With TMS, Eectrical Activity In the Brain Increases</h2>
         </div>
 
-        <h2>TMS</h2>
-        <span id="tms-desc">Transcranial Magnetic Treatment is a safe feature which is proven to be effective on those who did not see positive results from pharmaceudical approach. TMS is using magnetic field to Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Tellus in metus vulputate eu scelerisque. Consectetur lorem donec massa sapien faucibus. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. In cursus turpis massa tincidunt dui ut ornare lectus sit. Massa ultricies mi quis hendrerit dolor. Consequat nisl vel pretium lectus quam id leo in. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Mus mauris vitae ultricies leo integer malesuada nunc vel risus.
-
-          Duis at consectetur lorem donec massa sapien faucibus et. Risus feugiat in ante metus dictum at. Non pulvinar neque laoreet suspendisse interdum. Nullam ac tortor vitae purus. Vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Cursus risus at ultrices mi. Diam volutpat commodo sed egestas. Non sodales neque sodales ut etiam. Quam quisque id diam vel quam. Amet consectetur adipiscing elit ut aliquam purus sit amet luctus. Integer malesuada nunc vel risus commodo viverra maecenas. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque.
+        
+          <span class="desc-text" id="tms-desc">
+            <h3 class="desc-title">Transcranial Magnetic Stimulation (TMS)</h3>
+            <img class="desc-img" src="img/tms_img.webp" alt="image of tms result">
+            TMS stands for Transcranial Magnetic Stimulation, a non-invasive medical procedure used to stimulate specific areas of the brain using magnetic fields. TMS involves placing a magnetic coil on the scalp, near the targeted brain region. When the coil is activated, it generates brief, focused magnetic pulses that pass through the skull and into the brain. These magnetic pulses can modulate the activity of neurons in the targeted brain area. <br><br><br>
+            TMS has therapeutic potential and is primarily used in two main ways:<br />
+            <ol>
+              <li>
+                <b>Therapeutic TMS (Repetitive TMS, rTMS):</b> In this approach, repetitive magnetic pulses are delivered over a period of time, typically daily for several weeks. It's used as a treatment for various neuropsychiatric and neurological conditions, including:
+                <ul>
+                  <li><b>Depression:</b> rTMS is FDA-approved for treating treatment-resistant depression, when other treatments have not been effective.</li>
+                  <li><b>Anxiety Disorders:</b> Some studies have explored the use of rTMS for anxiety disorders like generalized anxiety disorder and obsessive-compulsive disorder.</li>
+                  <li><b>Migraine:</b> TMS has been investigated as a potential treatment for migraine with aura.</li>
+                  <li><b>Neurological Disorders:</b> TMS is being studied as a potential therapy for conditions like Parkinson's disease, epilepsy, and stroke recovery.</li>
+                </ul>
+              </li>
+              <li>
+                <b>Diagnostic TMS (Single-Pulse TMS):</b> In this approach, single magnetic pulses are used to temporarily disrupt brain activity in specific brain areas. This is mainly used for research purposes to study brain function and map cortical areas responsible for different functions.
+            
+                <br /><br />It's believed that TMS can modulate neuronal activity by inducing small electrical currents in the brain tissue, which can influence neurotransmitter levels and neuronal connectivity.
+                
+                <br /><br />TMS is considered safe when administered by trained healthcare professionals. Side effects are usually mild and temporary, including scalp discomfort or mild headache at the treatment site. Serious adverse effects are rare.
+                
+                It's important to note that while TMS offers promise as a treatment option, it might not be suitable or effective for everyone. A thorough assessment by a healthcare professional at our office is essential to determine whether TMS is appropriate for a specific individual and condition.
+              </li>
+            </ol>
+            
+            <br><br>Our office offers TMS therapy through insurance or cash-payment. To learn more, please contact us at 213-487-3060. 
+          </span>
+          <dialog id="conv-dialog">
+            <button id="conv-close-button">x</button>
+            <div id="dialog-header">
+                <h3>Contact Us</h3>
+            </div>
+            <form id="contact-form" action="/submit-p-form" method="dialog">
+                <select>
+                    <option value="default">  Location</option>
+                    <option>Los Angeles</option>
+                    <option>UCLA</option>
+                    <option>New York</option>
+                </select>
+                <select>
+                    <option value="default">  Returning Patient?</option>
+                    <option>Yes, I am returning</option>
+                    <option>No, I am a new patient</option>
+                </select>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+                <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+                <input id="conv-submit-button" type="submit" value="Submit">
+            </form>
+            <p id="contact-warning">
+                By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+            </p>
+        </dialog>
           
-          Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Massa tincidunt nunc pulvinar sapien et ligula. Tellus cras adipiscing enim eu turpis egestas pretium. Sed viverra ipsum nunc aliquet bibendum. Vel facilisis volutpat est velit. Urna molestie at elementum eu facilisis sed. Congue quisque egestas diam in arcu cursus euismod quis viverra. Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. Morbi tincidunt ornare massa eget egestas purus viverra. Quis risus sed vulputate odio ut. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Morbi blandit cursus risus at ultrices. At varius vel pharetra vel turpis nunc eget lorem dolor. Dui nunc mattis enim ut tellus elementum sagittis. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Nisi est sit amet facilisis magna etiam. Posuere ac ut consequat semper. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum.
-          
-          Tempor orci eu lobortis elementum nibh tellus. Ac ut consequat semper viverra nam libero justo laoreet. Blandit libero volutpat sed cras ornare arcu dui vivamus. Et tortor consequat id porta nibh venenatis cras. Cras semper auctor neque vitae tempus quam pellentesque nec. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Urna et pharetra pharetra massa massa ultricies mi quis. Eget mi proin sed libero enim sed faucibus turpis. Quis hendrerit dolor magna eget est lorem ipsum dolor. Nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est. Tortor at auctor urna nunc id cursus. Risus in hendrerit gravida rutrum quisque non tellus. Erat nam at lectus urna duis. Ut venenatis tellus in metus vulputate eu. Metus dictum at tempor commodo ullamcorper a lacus vestibulum.
-          
-          Eget sit amet tellus cras. Egestas egestas fringilla phasellus faucibus scelerisque. Nisl purus in mollis nunc sed id semper risus in. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna. Sed turpis tincidunt id aliquet. Morbi tristique senectus et netus et. Pellentesque sit amet porttitor eget dolor morbi non arcu risus. Pellentesque nec nam aliquam sem et. Turpis egestas sed tempus urna. Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Ipsum nunc aliquet bibendum enim facilisis gravida. Ac odio tempor orci dapibus ultrices. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique senectus. Varius quam quisque id diam vel. Arcu dictum varius duis at consectetur lorem donec massa. Facilisis volutpat est velit egestas dui id ornare arcu. Est ante in nibh mauris cursus mattis molestie. Sit amet nulla facilisi morbi. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur.
-        </span>
-
+        <button id="conv-button">
+            <svg
+                viewBox="-10 -14 44 70" 
+                width="100" height="100"
+                fill-rule="evenodd" 
+                clip-rule="evenodd">
+                <path 
+                    stroke="rgba(255, 255, 255, 1)" 
+                    stroke-width="1.5" 
+                    d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+                />
+            </svg>
+        </button>
 
     </main>
     <footer>

@@ -2,6 +2,33 @@ h3 {
     font-size: xx-large;
 }
 
+.hour-box {
+    padding: 2rem;
+    width: 100%;
+    background-color: rgba(16, 16, 63, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hour-box * {
+    padding:.2rem;
+}
+
+.hour-box ol{
+    margin: 0 2rem;
+    list-style-type: none;
+    font-size: larger;
+}
+
+.hour-box li {
+    display: flex;
+}
+.hour-box li .weekday {
+    width: 2.25rem;
+}
+
 #form-contact {
     display: flex;
     flex-direction: row;
