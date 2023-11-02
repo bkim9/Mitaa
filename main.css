@@ -5,8 +5,8 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #logo-img {
-    height:4.5rem; 
-    margin-left: -10rem;
+    height:4.24rem; 
+    margin-left: -9.5rem;
 }
 
 main { 
@@ -19,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('./img/brain.jpg');
+    background-image: url('./img/not_our_background.jpg');
     width: 100%;
     height: 60rem;
 }
@@ -71,11 +71,22 @@ h3 {
     margin: .5rem;
 }
 
-.desc-img {
+.desc-img#tms-img {
     float: right;
     width: 50rem;
     margin: .1rem 2rem;
     border-radius: .5rem;
+}
+
+.desc-imgs {
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+.desc-imgs img {
+    float: right;
+    width: 20rem;
 }
 
 /* steps or procedure */

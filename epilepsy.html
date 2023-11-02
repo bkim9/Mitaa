@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
+    <link rel="stylesheet" href="tms.css">
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+      <div id="logo-container">
+        <a href="./index.html" ><img class="logo" id="logo-img" src="./img/jkclogo.svg" alt="logo" /> </a>
+      </div>
+        <div id="navbar-container">
+          <ul id="nav-bar">
+            <li><a href=".">Home</a></li>
+            <li><a href="./bio.html">Bio</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./tms.html">TMS</a></li>
+            <li><a href="./contacts.html">Contact</a></li>
+          </ul>
+          <button onclick="location.href='./referral.html'">Patient Referral</button>
+        </div>
+    </header>
+    <main>
+        <div id="under-nav">
+          <h1>Epilepsy</h1>
+          <!-- <h2>and our Treatment</h2> -->
+        </div>
+
+        
+        <span class="desc-text" id="tms-desc">
+        <h3 class="desc-title">Epilepsy & Seizures</h3>
+        <!-- <img class="desc-img" src="img/tms_img.webp" alt="image of tms result"> -->
+        Epilepsy is a neurological disorder characterized by recurrent and unprovoked seizures. Seizures are temporary disturbances in brain function caused by abnormal and excessive electrical discharges from groups of brain cells. These discharges can disrupt normal brain activity, leading to various physical, sensory, or cognitive symptoms.
+        <br /><br />
+
+        Seizures can vary widely in terms of their presentation, duration, and intensity. They are categorized into two main types:
+        <ol>
+            <li>
+                <b>Focal (Partial) Seizures:</b> 
+                <ul>
+                    <li>
+                        These seizures originate in a specific area of the brain and affect only one part of the body or one side of the body.
+                    </li>
+                    <li>
+                        Symptoms depend on the location of the affected brain region and can include altered consciousness, unusual sensations, repetitive movements (motor symptoms), or changes in emotions or thought patterns.
+                    </li>
+                    <li>
+                        Focal seizures are further divided into two types:
+                        <ul>
+                            <li>
+                                <b>Focal Onset Aware Seizures (Simple Partial Seizures):</b> The person remains conscious during the seizure and may experience unusual sensations or movements.
+                            </li>
+                            <li>
+                                <b>Focal Onset Impaired Awareness Seizures (Complex Partial Seizures):</b> Consciousness is altered or lost during the seizure, and the person may engage in repetitive behaviors or movements.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b>Generalized Seizures:</b>
+                <ul>
+                    <li>
+                        These seizures involve widespread areas of the brain and typically result in loss of consciousness.
+                    </li>
+                    <li>
+                        Symptoms can include sudden muscle contractions (tonic-clonic movements), absence seizures (brief loss of awareness), myoclonic jerks (brief muscle twitches), or atonic seizures (loss of muscle tone, leading to falls).
+                    </li>
+                    <li>
+                        Generalized seizures are further classified into various types, including tonic-clonic (formerly known as grand mal), absence (formerly known as petit mal), myoclonic, and atonic seizures.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        
+        <br /><br />Epilepsy can have various causes, but often the exact cause is unknown. Potential underlying factors that can lead to epilepsy include:
+        <ol>
+            <li><b>Genetic Factors: </b>Certain genetic mutations or family history of epilepsy can increase the risk.</li>
+            <li><b>Brain Injuries: </b>Head injuries, strokes, infections, and brain tumors can damage brain tissue and trigger epilepsy.</li>
+            <li><b>Developmental Disorders: </b>Conditions such as autism and neurodevelopmental disorders can be associated with epilepsy.</li>
+            <li><b>Brain Abnormalities: </b>Structural brain abnormalities present from birth or acquired later in life can contribute.</li>
+            <li><b>Infections: </b>Infections such as meningitis or encephalitis can damage brain tissue and lead to epilepsy.</li>
+            <li><b>Metabolic Imbalances: </b>Certain metabolic disorders can affect brain function and lead to seizures.</li>
+            <li><b>Unknown Factors: </b>In many cases, the cause of epilepsy remains unknown.</li>
+        </ol>
+        <br />
+        Diagnosis of epilepsy involves a thorough medical history, physical examination, and diagnostic tests such as electroencephalography (EEG) to record brain activity during a seizure. Treatment aims to control seizures and improve the individual's quality of life. Treatment options include medications (antiepileptic drugs), lifestyle modifications, and in some cases, surgery or other medical interventions.
+
+If you suspect you or someone you know may have epilepsy, it's important to seek medical evaluation and guidance from a healthcare professional. Epilepsy management can vary based on the individual's specific situation and the type of seizures they experience.
+        
+        For expert care on any forms of epilepsy and seizures, please <a href="./contacts.html">contact JKC Clinic</a> through phone or online. 
+
+
+
+        </span>
+
+        <dialog id="conv-dialog">
+            <button id="conv-close-button">x</button>
+            <div id="dialog-header">
+                <h3>Contact Us</h3>
+            </div>
+            <form id="contact-form" action="/submit-p-form" method="dialog">
+                <select>
+                    <option value="default">  Location</option>
+                    <option>Los Angeles</option>
+                    <option>UCLA</option>
+                    <option>New York</option>
+                </select>
+                <select>
+                    <option value="default">  Returning Patient?</option>
+                    <option>Yes, I am returning</option>
+                    <option>No, I am a new patient</option>
+                </select>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+                <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+                <input id="conv-submit-button" type="submit" value="Submit">
+            </form>
+            <p id="contact-warning">
+                By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+            </p>
+        </dialog>
+          
+        <button id="conv-button">
+            <svg
+                viewBox="-10 -14 44 70" 
+                width="100" height="100"
+                fill-rule="evenodd" 
+                clip-rule="evenodd">
+                <path 
+                    stroke="rgba(255, 255, 255, 1)" 
+                    stroke-width="1.5" 
+                    d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+                />
+            </svg>
+        </button>
+
+    </main>
+    <footer>
+        <address id="contacts">
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
+        </address>
+    </footer>
+  </body>
+</html>

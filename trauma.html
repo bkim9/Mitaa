@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
+    <link rel="stylesheet" href="tms.css">
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+      <div id="logo-container">
+        <a href="./index.html" ><img class="logo" id="logo-img" src="./img/jkclogo.svg" alt="logo" /> </a>
+      </div>
+        <div id="navbar-container">
+          <ul id="nav-bar">
+            <li><a href=".">Home</a></li>
+            <li><a href="./bio.html">Bio</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./tms.html">TMS</a></li>
+            <li><a href="./contacts.html">Contact</a></li>
+          </ul>
+          <button onclick="location.href='./referral.html'">Patient Referral</button>
+        </div>
+    </header>
+    <main>
+        <div id="under-nav">
+          <h1>Traumatic Brain injuries</h1>
+          <!-- <h2>and our Treatment</h2> -->
+        </div>
+
+        
+        <span class="desc-text" id="tms-desc">
+        <h3 class="desc-title">Traumatic Brain injuries</h3>
+        <!-- <img class="desc-img" src="img/tms_img.webp" alt="image of tms result"> -->
+
+        Traumatic Brain Injury (TBI) refers to a type of injury that occurs when there is a sudden and violent blow or jolt to the head, leading to damage of the brain tissue. TBIs can range in severity from mild to severe and can have varying effects on cognitive, physical, emotional, and behavioral functions. They are typically categorized into three levels of severity: mild, moderate, and severe.
+            <br />
+        <ol>
+            <li><b>Mild Traumatic Brain Injury (Concussion): </b>
+                <ul>
+                    <li>A mild TBI, commonly referred to as a concussion, is characterized by a brief loss of consciousness or disorientation after a head injury.</li>
+                    <li>Symptoms may include headache, dizziness, confusion, memory problems, sensitivity to light or sound, and mood changes.</li>
+                    <li>Most people with mild TBIs recover fully with rest and proper management, although some symptoms may persist for a period of time.</li>
+                </ul>
+            </li>
+            <li><b>Moderate Traumatic Brain Injury: </b>
+                <ul>
+                    <li>A moderate TBI involves more significant damage to the brain tissue and is characterized by longer-lasting changes in consciousness and cognitive function.</li>
+                    <li>Symptoms can include prolonged confusion, memory deficits, mood changes, sensory problems, and physical impairments.</li>
+                    <li>Rehabilitation and medical treatment are often required to help individuals recover as much function as possible.</li>
+                </ul>
+            </li>
+            <li><b>Severe Traumatic Brain Injury: </b>
+                <ul>
+                    <li>Rehabilitation and medical treatment are often required to help individuals recover as much function as possible.</li>
+                    <li>Symptoms can include severe cognitive deficits, motor impairments, sensory deficits, and significant changes in behavior and personality.</li>
+                    <li>Recovery from a severe TBI can be challenging and may involve long-term rehabilitation, medical interventions, and support from healthcare professionals, family, and caregivers.</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <br /><br />
+        Causes of traumatic brain injuries can include:
+        <ul>
+            <li><b>Falls: </b>Falls, especially among young children and older adults, are a common cause of TBIs.</li>
+            <li><b>Motor Vehicle Accidents: </b>Car crashes, motorcycle accidents, and accidents involving pedestrians or bicyclists can lead to head injuries.</li>
+            <li><b>Sports Injuries: </b>Contact sports and activities with a risk of collision, such as football, soccer, and hockey, can result in TBIs.</li>
+            <li><b>Assaults: </b>Intentional blows to the head, such as those from physical assaults, can cause traumatic brain injuries.</li>
+            <li><b>Blast Injuries: </b>Explosions and blasts, often seen in military personnel or individuals exposed to explosive devices, can cause TBIs.</li>
+            <li><b>Penetrating Injuries: </b>Objects penetrating the skull, such as bullets or fragments, can cause severe brain damage.</li>
+        </ul>
+
+        The effects of a traumatic brain injury can vary widely depending on the severity, location, and extent of brain damage. Common symptoms include cognitive deficits (memory, attention, problem-solving), motor impairments, speech and language difficulties, sensory disturbances, emotional changes, and behavioral challenges.
+
+        <br /><br />
+        Treatment and rehabilitation for TBIs depend on the severity and specific symptoms. Medical interventions, TMS therapy, surgery, physical therapy, occupational therapy, speech therapy, counseling, and support from healthcare professionals and loved ones play crucial roles in maximizing recovery and improving quality of life for individuals with traumatic brain injuries.
+        <br /><br />
+
+        For expert care of all types of TBIs, please <a href="./contacts.html">contact JKC Clinic</a> through phone or online for proper diagnosis and treatment recommendations tailored to your specific situation. 
+
+
+
+        </span>
+
+        <dialog id="conv-dialog">
+            <button id="conv-close-button">x</button>
+            <div id="dialog-header">
+                <h3>Contact Us</h3>
+            </div>
+            <form id="contact-form" action="/submit-p-form" method="dialog">
+                <select>
+                    <option value="default">  Location</option>
+                    <option>Los Angeles</option>
+                    <option>UCLA</option>
+                    <option>New York</option>
+                </select>
+                <select>
+                    <option value="default">  Returning Patient?</option>
+                    <option>Yes, I am returning</option>
+                    <option>No, I am a new patient</option>
+                </select>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+                <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+                <input id="conv-submit-button" type="submit" value="Submit">
+            </form>
+            <p id="contact-warning">
+                By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+            </p>
+        </dialog>
+          
+        <button id="conv-button">
+            <svg
+                viewBox="-10 -14 44 70" 
+                width="100" height="100"
+                fill-rule="evenodd" 
+                clip-rule="evenodd">
+                <path 
+                    stroke="rgba(255, 255, 255, 1)" 
+                    stroke-width="1.5" 
+                    d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+                />
+            </svg>
+        </button>
+
+    </main>
+    <footer>
+        <address id="contacts">
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
+        </address>
+    </footer>
+  </body>
+</html>
