@@ -6,7 +6,10 @@
     <meta chartset="UTF-8" />
     <title>Mitaa Memory Clinic</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="headerfooter.css">
+    <link rel="stylesheet" href="referral.css">
+    <link rel="stylesheet" href="headerfooter.css">    
+    <link rel="stylesheet" href="conv-dialog.css">
+    <script src="conv-dialog.js"></script>
   </head>
   <body>
     <!-- Header holds logo and appname -->
@@ -31,26 +34,179 @@
         <h1>Patient Referral</h1>
         <h2>Specialist Epilepsy, Cedar Sinai Staff</h2>
       </div>
-        <form id="patient-form" action="/submit-p-form" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br><br>
-          <input type="submit" value="Submit">
+
+      <div id="dialog-header">
+        <h3>Patient Information</h3>
+      </div>
+
+      <form id="referral-form" action="/submit-p-form">
+        <h4>Today's Date</h4>
+        <input type="date" id="today" name="today" placeholder="Todays Date (MM/DD/YY)" />
+        <h4>Location</h4>
+        <select>
+            <option value="default">  Location</option>
+            <option>Los Angeles</option>
+            <option>UCLA</option>
+            <option>New York</option>
+        </select>
+
+
+        <h4>Patient First Name</h4> 
+        <input type="text" id="name" name="name" placeholder="Patient First Name">
+        <h4>Patient Last Name</h4> 
+        <input type="text" id="name" name="name" placeholder="Patient Last Name">
+        <h4>Patient Email</h4>
+        <input type="email" id="patient-email" name="patient-email" placeholder="Patient Email">
+
+        <h4>Patient Phone Number</h4>
+        <input type="tel" id="patient-tel" name="patient-tel" placeholder="Patient Phone Number" pattern="^\d{10}$" required>
+        <!-- gender -->
+        <h4>Gender*</h4>
+        <div>
+          <input type="checkbox" id="male" name="male" checked />
+          <label for="male">Male</label>
+        </div>
+      
+        <div>
+          <input type="checkbox" id="female" name="female" />
+          <label for="female">Female</label>
+        </div>
+          
+        <h4>Date of Birth (MM/DD/YY)</h4>
+        <input type="date" id="dob" name="dob" placeholder="Date of Birth (MM/DD/YY)" />
+
+        <h4>Referring Facility Name</h4>
+        <input type="text" id="facility-name" name="facility-name" placeholder="Referring Facility Name">
+
+        <h4>Referring Doctor Name</h4>
+        <input type="text" id="doctor-name" name="doctor-name" placeholder="Referring Doctor Name">
+        
+        <h4>Referring Doctor Phone Number</h4>
+        <input type="tel" id="doctor-tel" name="doctor-tel" placeholder="Referring Doctor Phone Number" pattern="^\d{10}$">
+
+        <h4>Referring Doctor Email</h4>
+        <input type="email" id="doctor-email" name="doctor-email" placeholder="Doctor Email">
+
+    
+
+        <h4>Submitting Person's Name</h4>
+        <input type="text" id="submiter-name" name="submiter-name" placeholder="Form Submiter Name*">
+
+        <h4>Reason for Referral</h4>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Headaches</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Alzheimer's Disease</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Neck Pain</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Insomnia</label>
+        </div>
+        <h4>Service Requested</h4>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service0</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service1</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service2</label>
+        </div>        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service3</label>
+        </div>
+        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service4</label>
+        </div>        <div>
+          <input type="checkbox" class="reason" name="reason" checked />
+          <label for="reason">Service5</label>
+        </div>
+        <h4>Patient Preferred Language</h4>
+        <div>
+          <input type="checkbox" id="eng" name="eng" checked />
+          <label for="eng">English</label>
+        </div>
+      
+        <div>
+          <input type="checkbox" id="spa" name="spa" />
+          <label for="spa">Spanish</label>
+        </div>
+
+        <div>
+          <input type="checkbox" id="kor" name="kor" />
+          <label for="kor">Korean</label>
+        </div>
+        <div>
+          <input type="checkbox" id="kor" name="kor" />
+          <label for="kor">Other</label>
+        </div>
+        <h4>Any Other Symptoms?</h4>
+        <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+        <input id="conv-submit-button" type="submit" value="Submit">
+      </form>
+
+
+      
+      <dialog id="conv-dialog">
+        <button id="conv-close-button">x</button>
+        <div id="dialog-header">
+            <h3>Contact Us</h3>
+        </div>
+        <form id="contact-form" action="/submit-p-form" method="dialog">
+            <select>
+                <option value="default">  Location</option>
+                <option>Los Angeles</option>
+                <option>UCLA</option>
+                <option>New York</option>
+            </select>
+            <select>
+                <option value="default">  Returning Patient?</option>
+                <option>Yes, I am returning</option>
+                <option>No, I am a new patient</option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="Full Name">
+            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+            <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+            <input id="conv-submit-button" type="submit" value="Submit">
         </form>
-        <form id="doctor-form" action="/submit-d-form" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br><br>
-          <input type="submit" value="Submit">
-        </form>
+        <p id="contact-warning">
+            By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+        </p>
+    </dialog>
+      
+    <button id="conv-button">
+        <svg
+            viewBox="-10 -14 44 70" 
+            width="100" height="100"
+            fill-rule="evenodd" 
+            clip-rule="evenodd">
+            <path 
+                stroke="rgba(255, 255, 255, 1)" 
+                stroke-width="1.5" 
+                d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+            />
+        </svg>
+    </button>
+
+
     </main>
     <footer>
         <address id="contacts">
             <p>3700 Wilshire Blvd, Suite 200 </p>
             <p>Los Angeles, CA 90010 <br /></p>
-            <a href="mailto:kbs@mitaa.com">kbs@mitaa.com</a>
+            <a href="mailto:kbs@mitaa.com">info@mitaa.com</a>
             <a href="tel:+1213-487-3060">213-487-3060</a>
         </address>
     </footer>
