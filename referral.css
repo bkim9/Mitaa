@@ -29,3 +29,11 @@
     height: 1rem;
     width: 1rem;
 }
+
+#referral-form #referral-submit-button {
+    border: none;
+    height: 3rem;
+    width: 24rem;
+    background-color: rgb(86, 86, 148);
+    color:white;
+}
