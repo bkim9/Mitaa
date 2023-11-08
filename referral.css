@@ -1,7 +1,31 @@
 #referral-form {
+    width:50rem;
     display: grid;
-    padding: 1.25rem;
+    padding: 1rem;
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
 }
+#referral-form > div {
+    margin: .25rem;
+}
 
+#referral-form input {
+    height: 2rem;
+    width: 23rem;
+    padding: .5rem;
+    font-size: large;
+    border-radius: .5rem;
+}
+
+#referral-form > div select {
+    width: 24rem;
+    padding: .5rem;
+    height: 3rem;
+    font-size: large;
+    border-radius: .5rem;
+}
+
+#referral-form input[type="checkbox"] {
+    height: 1rem;
+    width: 1rem;
+}
