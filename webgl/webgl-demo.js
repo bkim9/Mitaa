@@ -1,7 +1,7 @@
 import { initBuffers } from "./init-buffers.js";
 import { drawScene }   from "./draw-scene.js";
  
-let copyVideo = false
+let copyVideo = false;
 let cubeRotation = 0;
 let deltaTime = 0;
 main();
@@ -91,7 +91,8 @@ function main() {
         },
     };
     const buffers = initBuffers(gl);
-    const texture = loadTexture(gl, "cubetexture.png");
+    const texture = initTexture(gl);
+    const video   = setupVideo("vid.mp4");
     // Flip image pixels into the bottom-to-top order that WebGL expects.
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
     
@@ -101,6 +102,10 @@ function main() {
         now *= 0.001; // convert to seconds
         deltaTime = now - then;
         then = now;
+
+        if (copyVideo) {
+            updateTexture(gl, texture, video);
+        }
 
         drawScene(gl, programInfo, buffers, texture, cubeRotation);
         cubeRotation += deltaTime;
@@ -163,7 +168,7 @@ function loadShader(gl, type, source) {
     return shader;
 }
 
-function loadTexture(gl, url) {
+function initTexture(gl) {
     const texture = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, texture);
 
@@ -187,27 +192,9 @@ function loadTexture(gl, url) {
         pixel,
     );
 
-    const image = new Image();
-    image.onload = () => {
-        gl.bindTexture(gl.TEXTURE_2D, texture);
-        gl.texImage2D(
-            gl.TEXTURE_2D,
-            level,
-            internalFormat,
-            srcFormat,
-            srcType,
-            image,
-        );
-
-        if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-            gl.generateMipmap(gl.TEXTURE_2D);
-        } else {
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-        }
-    };
-    image.src= url;
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
     return texture;
 }
@@ -246,7 +233,7 @@ function setupVideo(url) {
         },
         true,
     );
-    video.src= url;
+    video.src = url;
     video.play();
 
     function checkReady() {
@@ -256,4 +243,20 @@ function setupVideo(url) {
     }
 
     return video;
+}
+
+function updateTexture(gl, texture, video) {
+    const level = 0;
+    const internalFormat = gl.RGBA;
+    const srcFormat = gl.RGBA;
+    const srcType   = gl.UNSIGNED_BYTE;
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texImage2D(
+        gl.TEXTURE_2D,
+        level,
+        internalFormat,
+        srcFormat,
+        srcType,
+        video, // here
+    );
 }
