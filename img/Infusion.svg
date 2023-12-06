@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3 {
+        stroke: #170075;
+        stroke-miterlimit: 10;
+        stroke-width: 25px;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="612" height="612"/>
+  <rect class="cls-3" x="170.66" y="95" width="260.59" height="315.95" rx="74.21" ry="74.21"/>
+  <line class="cls-1" x1="168.6" y1="180.74" x2="216.26" y2="180.74"/>
+  <line class="cls-1" x1="168.5" y1="235.46" x2="236.03" y2="235.46"/>
+  <line class="cls-1" x1="168.6" y1="290.17" x2="216.26" y2="290.17"/>
+  <line class="cls-1" x1="168.6" y1="290.17" x2="216.26" y2="290.17"/>
+  <line class="cls-1" x1="168.6" y1="344.89" x2="216.26" y2="344.89"/>
+  <path class="cls-3" d="m171.03,200.36c65.59,33.27,65.35,29.98,130.03-1,64.68-30.98,90.35-18.23,129.81,1.49"/>
+  <path class="cls-3" d="m300.95,414.9c.72,20.96,1.43,41.91,2.15,62.87.24,6.96.54,14.18,3.58,20.41,3.94,8.05,12.03,13.33,20.51,15.82,8.48,2.49,17.44,2.55,26.26,2.59,30.02.14,60.03.27,90.05.41"/>
+</svg>

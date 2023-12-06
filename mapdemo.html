@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Switch to Mapbox</title>
+  <!-- <meta name='viewport' content='width=device-width, initial-scale=1' /> -->
+  <!-- Import Mapbox GL JS  -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #jkcmap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Create a container for the jkcmap. -->
+  <div id='jkcmap'></div>
+
+  <script>
+    // Add your Mapbox access token.
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmtpbTkiLCJhIjoiY2xwdTl4bXR0MDNjNDJscXJ5Z2xxNXh1aCJ9.gsUYWzPvyhbFzLf2-IEHGQ';
+
+    markerloc = [-118.30722410802338, 34.06053851590417];
+    // Code from the next step will go here.
+    const jkcmap = new mapboxgl.Map({
+        container: 'jkcmap', 
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: markerloc, 
+        zoom: 18 
+    });
+    const marker = new mapboxgl.Marker()
+        .setLngLat(markerloc)
+        .addTo(jkcmap);
+  </script>
+</body>
+
+</html>

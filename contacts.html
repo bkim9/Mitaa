@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="headerfooter.css">
     <link rel="stylesheet" href="map-card.css">
     <link rel="stylesheet" href="contacts.css">
-    <link rel="stylesheet" href="conv-dialog.css">
+    <link rel="stylesheet" href="conv-dialog.css">  
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <script src="conv-dialog.js"></script>
+    <script src="map-card.js"></script>
   </head>
   <body>
     <!-- Header holds logo and appname -->
@@ -38,7 +41,7 @@
       </div>
       <div class="map-cards">
         <div class="map-card" id="map-card1">
-          <img src="./img/mapjkc.jpg" alt="map-img" class="map-img">
+          <div id="jkcmap" alt="map-img" class="map-img"></div>
           <div class="map-contact">
             <div class="tel-container">
               <a href="tel:+1213-487-3060" class="map-phone">&#9742 213-487-3060</a>
@@ -55,15 +58,17 @@
         </div>
 
         <div class="map-card" id="map-card2">
-          <img src="./img/mapko.jpg" alt="map-img" class="map-img">
+          <div id="drkomap" alt="map-img" class="map-img"></div>
           <div class="map-contact">
             <div class="tel-container">
-              <a href="tel:+1310-478-3711" class="map-phone">&#9742 310-478-3711</a>
+              <a href="tel:+1310-367-0955" class="map-phone">&#9742 310-367-0955</a>
             </div>
             <div class="book-container">
-              <span class="book-online" onclick="alert('book online')">
+              <a href="https://www.jekomdphd.com">
+              <span class="book-online">
                 Book Online
               </span>
+            </a>
             </div>
           </div>
         </div>
