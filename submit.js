@@ -29,6 +29,5 @@ function sendEmail(name, email, message) {
         Username: 'kbbss96@gmail.com',
         Password: 'acewrgjwsybbeiyt',
         To: "kbbss96@gmail.com",
-        
     })
 }
