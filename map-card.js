@@ -9,6 +9,8 @@ function init_map(idloc) {
     const marker = new mapboxgl.Marker()
         .setLngLat(idloc.loc)
         .addTo(map);
+
+    map.addControl(new mapboxgl.FullscreenControl());
 }
 
 function init_maps(){    
