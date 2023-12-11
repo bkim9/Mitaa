@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 import { getMessaging } from "firebase/messaging";
 import { collection, addDoc } from "firebase/firestore"; 
@@ -46,9 +47,9 @@ try {
 }
 
 // when the app has the browser focus
-onMessage(messaging, (payload)=> {
-  console.log('Message received. ', payload);
-})
+// onMessage(messaging, (payload)=> {
+//   console.log('Message received. ', payload);
+// })
 
 
 async function getCities(db) {
