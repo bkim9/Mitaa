@@ -2,7 +2,7 @@
   "name": "mitaa",
   "version": "1.0.0",
   "description": "",
-  "main": "conv-dialog.js",
+  "main": "./scripts/conv-dialog.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
