@@ -34,18 +34,18 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const messaging = getMessaging(app);
 const db = getFirestore(app);
-
-try {
-  const docRef = await addDoc(collection(db, "users"), {
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-  });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
+async function submitInfo() {
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
 }
-
 // when the app has the browser focus
 // onMessage(messaging, (payload)=> {
 //   console.log('Message received. ', payload);
