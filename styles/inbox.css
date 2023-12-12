@@ -1,0 +1,6 @@
+.inbox-doc {
+    width: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

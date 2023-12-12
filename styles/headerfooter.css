@@ -58,6 +58,7 @@ footer {
     padding: 1rem;
     color: white;
     height: 10rem;
+    /* align-self: flex-start; */
 }
 footer address {
     display: flex;
