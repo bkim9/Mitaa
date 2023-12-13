@@ -29,13 +29,11 @@ function displayItem(item) {
     const itemData = item.data()
     const inboxE = document.querySelector('#inboxes');
     // CreateElement
-    if ("content" in document.createElement("template")) {
+    if (inboxE && "content" in document.createElement("template")) {
         const template = document.querySelector("#inbox-template");
         // Clone
         console.log(template);
         const clone = template.content.cloneNode(true);
-        // console.log(itemData);
-        // console.log(itemData["name"]);
 
         clone.querySelector('.name'       ).textContent = itemData.name
         clone.querySelector('.new-patient').textContent = itemData["new-patient"]
@@ -46,6 +44,17 @@ function displayItem(item) {
         inboxE.appendChild(clone);
     }
 }
+
+function display_items(data) {
+    data.forEach(displayItem);
+}
+
+async function init() {
+    let data = await getDocs(collection(db, "users"));
+    display_items(data);
+}
+
+window.addEventListener("DOMContentLoaded", init);
 
 // /** 
 //  * loads the current data from storage and appends
@@ -71,16 +80,7 @@ function displayItem(item) {
 //     window.localStorage.setItem(storage_key, JSON.stringify(items));
 // }
 
-function display_items(data) {
-    data.forEach(displayItem);
-}
 
-async function init() {
-    let data = await getDocs(collection(db, "users"));
-    display_items(data);
-}
-
-window.addEventListener("DOMContentLoaded", init);
 
 
 // https://firebase.google.com/docs/firestore/query-data/get-data
