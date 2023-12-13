@@ -26,17 +26,19 @@ const db  = getFirestore(app);
 // }
 
 function displayItem(item) {
+    const itemData = item.data()
     const inboxE = document.querySelector('#inboxes');
     // CreateElement
     if ("content" in document.createElement("template")) {
         const template = document.querySelector("#inbox-template");
         // Clone
         const clone = template.content.cloneNode(true);
-        clone.querySelector('.name'       ).textContent = experinece.name
-        clone.querySelector('.new-patient').textContent = experinece.new-patient
-        clone.querySelector('.email'      ).textContent = experinece.email
-        clone.querySelector('.location'   ).textContent = experinece.location
-        clone.querySelector('.mobile'     ).textContent = experinece.mobile
+        console.log(item.data());
+        clone.querySelector('.name'       ).textContent = itemData.name
+        clone.querySelector('.new-patient').textContent = itemData.new-patient
+        clone.querySelector('.email'      ).textContent = itemData.email
+        clone.querySelector('.location'   ).textContent = itemData.location
+        clone.querySelector('.mobile'     ).textContent = itemData.mobile
         inboxE.appendChild(clone);
     }
 }
@@ -66,15 +68,12 @@ function displayItem(item) {
 // }
 
 function display_items(data) {
-    data.forEach(displayInbox);
+    data.forEach(displayItem);
 }
 
 async function init() {
-
-    let data = getDocs(collection(db, "users"));
-
-    console.log(data);
-    // display_items(data);
+    let data = await getDocs(collection(db, "users"));
+    display_items(data);
 }
 
 window.addEventListener("DOMContentLoaded", init);
