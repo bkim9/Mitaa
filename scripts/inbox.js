@@ -34,9 +34,9 @@ function displayItem(item) {
         // Clone
         console.log(template);
         const clone = template.content.cloneNode(true);
-
+        clone.querySelector('.update-time').textContent = itemData["updated-time"];
         clone.querySelector('.name'       ).textContent = itemData.name
-        clone.querySelector('.new-patient').textContent = itemData["new-patient"]
+        clone.querySelector('.new-patient').textContent = itemData["new-patient"];
         clone.querySelector('.email'      ).textContent = itemData.email
         clone.querySelector('.location'   ).textContent = itemData.location
         clone.querySelector('.mobile'     ).textContent = itemData.mobile

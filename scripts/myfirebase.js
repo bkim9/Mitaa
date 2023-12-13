@@ -39,20 +39,21 @@ function initSubmit() {
   });
 
   formElem.addEventListener("formdata", (e) => {
+    const date = new Date().toLocaleString("en-US");
     const data = e.formData;
-    console.log(formElem);
     var loc = formElem.querySelector('select.location').value;
     var retun = formElem.querySelector('select.returning').value;
-    data.append("location", loc)
-    data.append("new-patient", retun)
+    data.append("location", loc);
+    data.append("new-patient", retun);
+    data.append("updated-time", date )
     submitInfo(data);
     // var json = JSON.stringify(object);
   });
 }
 
-function initInbox() {
-  localStorage.setItem("myCat", "Tom");
-}
+// function initInbox() {
+//   localStorage.setItem("myCat", "Tom");
+// }
 
 window.addEventListener("DOMContentLoaded", initSubmit);
 
