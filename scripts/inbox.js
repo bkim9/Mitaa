@@ -1,12 +1,7 @@
-{/* <div id="inboxes"> */}
-// Created by Beomsu Kim on Dec.12th 2023
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { doc, getDoc } from "firebase/firestore"; 
+import { collection, getDocs} from "firebase/firestore"; 
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBAA028ZEhA_ylFS1zut-h9mvp5V6aoFw4",
     authDomain: "mitaa-401922.firebaseapp.com",
@@ -20,9 +15,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
 
-// load from firebase
-
-
 // function clearItems(parent) {
 //     while (parent.hasChildNodes())
 //         parent.removeChild(parent.firstChild)
@@ -34,7 +26,7 @@ const db  = getFirestore(app);
 // }
 
 // function displayItem(item) {
-//     const expE = document.querySelector('#experiences');
+//     const expE = document.querySelector('#inboxes');
 //     if( !checkFit(experinece) ) return;
 //     // CreateElement
 //     if ("content" in document.createElement("template")) {
@@ -43,11 +35,11 @@ const db  = getFirestore(app);
 //         const clone = template.content.cloneNode(true);
 //         const skilllist = clone.querySelector('#skills-box')
 //         appendArray(skilllist, experinece.label)
-//         clone.querySelector('#job'    ).textContent = experinece.title
-//         clone.querySelector('#company').textContent = experinece.company
-//         clone.querySelector('#from'   ).textContent = experinece.from
-//         clone.querySelector('#to'     ).textContent = experinece.to
-//         clone.querySelector('#city'   ).textContent = experinece.city
+//         clone.querySelector('.name'    ).textContent = experinece.title
+//         clone.querySelector('.email').textContent = experinece.company
+//         clone.querySelector('.mobile'   ).textContent = experinece.from
+//         clone.querySelector('.to'     ).textContent = experinece.to
+//         clone.querySelector('.city'   ).textContent = experinece.city
 //         const desclist = clone.querySelector('#desc')
 //         appendArray(desclist, experinece.desc)
 //         // hidden-desc
@@ -82,37 +74,26 @@ const db  = getFirestore(app);
 //     window.localStorage.setItem(storage_key, JSON.stringify(items));
 // }
 
-// function display_items(data) {
-//     const exp = data.experience;
-//     const projs= data.projects;    
-//     exp.forEach(displayExp);
-//     projs.forEach(displayProj);
-//     addClickCopy();
-//     addClickBlock();
-// }
+function display_items(data) {
+    data.forEach(displayInbox);
+}
 
-// // firebase->localStorage
-// async function importJSON() { 
-//     fetch("./data.json") 
-//         .then((res) => { 
-//         return res.json(); 
-//     }) 
-//     .then((data) => {
-//         store_items(data,0);
-//         return data;
-//     });
-// }
+async function init() {
 
-// function init() {
-//     importJSON();
+    let data = getDocs(collection(db, "users"));
 
-//     let data = load_items(0);
+    console.log(data);
+    // display_items(data);
+}
 
-//     // append skills buttons
-//     const skillsEBox = document.querySelector('details.skills');
-//     appendSkillButtons(skillsEBox,data.skills);
+window.addEventListener("DOMContentLoaded", init);
 
-//     display_items(data);
-// }
 
-// window.addEventListener("DOMContentLoaded", init);
+// https://firebase.google.com/docs/firestore/query-data/get-data
+// Get multiple documents from a collection,
+// Get all documents in a collection
+
+// https://firebase.google.com/docs/web/module-bundling
+// Using Firebase with Rollup
+
+// https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel
