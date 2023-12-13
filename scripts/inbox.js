@@ -25,30 +25,21 @@ const db  = getFirestore(app);
 //     display_items(load_items(0));
 // }
 
-// function displayItem(item) {
-//     const expE = document.querySelector('#inboxes');
-//     if( !checkFit(experinece) ) return;
-//     // CreateElement
-//     if ("content" in document.createElement("template")) {
-//         const template = document.querySelector("#experience-template");
-//         // Clone
-//         const clone = template.content.cloneNode(true);
-//         const skilllist = clone.querySelector('#skills-box')
-//         appendArray(skilllist, experinece.label)
-//         clone.querySelector('.name'    ).textContent = experinece.title
-//         clone.querySelector('.email').textContent = experinece.company
-//         clone.querySelector('.mobile'   ).textContent = experinece.from
-//         clone.querySelector('.to'     ).textContent = experinece.to
-//         clone.querySelector('.city'   ).textContent = experinece.city
-//         const desclist = clone.querySelector('#desc')
-//         appendArray(desclist, experinece.desc)
-//         // hidden-desc
-//         const hiddenDesc = clone.querySelector('#hidden-desc')
-//         appendArray(hiddenDesc, experinece.desc, true)
-//         // appendChild
-//         expE.appendChild(clone);
-//     }
-// }
+function displayItem(item) {
+    const inboxE = document.querySelector('#inboxes');
+    // CreateElement
+    if ("content" in document.createElement("template")) {
+        const template = document.querySelector("#inbox-template");
+        // Clone
+        const clone = template.content.cloneNode(true);
+        clone.querySelector('.name'       ).textContent = experinece.name
+        clone.querySelector('.new-patient').textContent = experinece.new-patient
+        clone.querySelector('.email'      ).textContent = experinece.email
+        clone.querySelector('.location'   ).textContent = experinece.location
+        clone.querySelector('.mobile'     ).textContent = experinece.mobile
+        inboxE.appendChild(clone);
+    }
+}
 
 // /** 
 //  * loads the current data from storage and appends
