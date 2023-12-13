@@ -32,15 +32,17 @@ function displayItem(item) {
     if ("content" in document.createElement("template")) {
         const template = document.querySelector("#inbox-template");
         // Clone
+        console.log(template);
         const clone = template.content.cloneNode(true);
-        console.log(itemData);
-        console.log(itemData["name"]);
+        // console.log(itemData);
+        // console.log(itemData["name"]);
 
         clone.querySelector('.name'       ).textContent = itemData.name
         clone.querySelector('.new-patient').textContent = itemData["new-patient"]
         clone.querySelector('.email'      ).textContent = itemData.email
         clone.querySelector('.location'   ).textContent = itemData.location
         clone.querySelector('.mobile'     ).textContent = itemData.mobile
+        clone.querySelector('.note'       ).textContent = itemData.story
         inboxE.appendChild(clone);
     }
 }
