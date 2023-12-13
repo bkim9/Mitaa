@@ -33,9 +33,11 @@ function displayItem(item) {
         const template = document.querySelector("#inbox-template");
         // Clone
         const clone = template.content.cloneNode(true);
-        console.log(item.data());
+        console.log(itemData);
+        console.log(itemData["name"]);
+
         clone.querySelector('.name'       ).textContent = itemData.name
-        clone.querySelector('.new-patient').textContent = itemData.new-patient
+        clone.querySelector('.new-patient').textContent = itemData["new-patient"]
         clone.querySelector('.email'      ).textContent = itemData.email
         clone.querySelector('.location'   ).textContent = itemData.location
         clone.querySelector('.mobile'     ).textContent = itemData.mobile
