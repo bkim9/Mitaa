@@ -90,9 +90,8 @@ footer a {
     #logo-img {
         height: 3.9rem;
     }
-    #navbar-container {
-        
-        height: 10rem;
+    .menu {
+        height: 0;
         width: 100%;
         background-color: rgba(16, 16, 63, 0.7);
         flex-direction: column;
@@ -106,7 +105,7 @@ footer a {
         margin: .5rem;
     }
 
-    #nav-toggle:checked ~ #navbar-container{
+    #nav-toggle:checked ~ .menu{
         height: 10rem;
     }
 }
