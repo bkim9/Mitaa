@@ -5,10 +5,10 @@ header footer {
 
 header {
     display: flex;
-    padding: 1rem;
     justify-content: space-between;
     background-color: rgba(16, 16, 63, 0.928);
     height: 5vh;
+    padding: 1rem;
 }
 
 #navbar-container {
@@ -58,6 +58,7 @@ footer {
     padding: 1rem;
     color: white;
     height: 10vh;
+    padding: 2rem;
     /* align-self: flex-start; */
 }
 footer address {
