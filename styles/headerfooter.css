@@ -11,19 +11,22 @@ header {
     padding: 1rem;
 }
 
+#logo-img {
+    height: 100%;
+    /* margin-left: -7rem; */
+}
+
+#nav-toggle {
+    display: none;
+}
+
 #navbar-container {
     display: flex;
 }
 
-#navbar-container ul {
-    display: flex;
-    align-items: center;
-    padding:1rem;
-    list-style-type: none;
-}
-
-#navbar-container li {
-    padding:.5rem;
+nav a {
+    margin-right: 1rem;
+    align-self: center;
 }
 
 header a {
@@ -75,4 +78,35 @@ footer a {
     color: white;
     text-decoration: none;
     font-size: x-large;
+}
+
+/* hamburger */
+@media screen and (max-width: 1000px) {
+
+    header {
+        flex-direction: column;
+        height: 4rem;
+    }
+    #logo-img {
+        height: 3.9rem;
+    }
+    #navbar-container {
+        
+        height: 10rem;
+        width: 100%;
+        background-color: rgba(16, 16, 63, 0.7);
+        flex-direction: column;
+        
+        overflow: hidden;
+        transition: all 0.3s ease;
+        z-index: 120;
+    }
+
+    #navbar-container a{
+        margin: .5rem;
+    }
+
+    #nav-toggle:checked ~ #navbar-container{
+        height: 10rem;
+    }
 }
