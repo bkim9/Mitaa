@@ -20,10 +20,11 @@
   <body>
     <!-- Header holds logo and appname -->
     <header>
-        <div id="logo-container">
-          <a href="./index.html" ><img class="logo" id="logo-img" src="./img/jkclogo.svg" alt="logo" /> </a>
-        </div>
-        <nav id="navbar-container">
+      <a href="./index.html" ><img class="logo" id="logo-img" src="./img/jkclogo.svg" alt="logo" /> </a>
+      <nav id="navbar-container">
+        <input id="nav-toggle" type="checkbox"/>
+        <label class="hamburger" for="nav-toggle">ham</label>
+        <nav class="menu">
           <a href="./index.html">Home</a>
           <a href="./bio.html">Bio</a>
           <a href="./about.html">About</a>
@@ -32,6 +33,7 @@
           <a href="./contacts.html">Contacts</a>
           <button onclick="location.href='./referral.html'">Patient Referral</button>
         </nav>
+      </nav>
     </header>
     <main>
 

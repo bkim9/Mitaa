@@ -15,12 +15,16 @@ header {
     height: 100%;
     /* margin-left: -7rem; */
 }
-
+#navbar-container {
+    display: flex;
+}
 #nav-toggle {
     display: none;
 }
-
-#navbar-container {
+.hamburger {
+    display: none;
+}
+.menu {
     display: flex;
 }
 
@@ -36,7 +40,7 @@ header a {
 }
 
 header button {
-    padding: .2rem .4rem;
+    padding: 1rem 1rem;
     width: 12rem;
     font-size: x-large;
     background-color: rgba(255, 255, 255, 0.2);
@@ -82,30 +86,51 @@ footer a {
 
 /* hamburger */
 @media screen and (max-width: 1000px) {
-
     header {
+        padding: 1rem 0;
         flex-direction: column;
-        height: 4rem;
+        height: 3rem;
+        transition: all 0.3s ease;
+        align-items: center;
+        overflow: hidden;
     }
     #logo-img {
-        height: 3.9rem;
+        height: 3.2rem;
+        margin-bottom: .4rem;
     }
-    .menu {
-        height: 0;
-        width: 100%;
-        background-color: rgba(16, 16, 63, 0.7);
+    #navbar-container {
+        width:100%;
+        height: auto;
         flex-direction: column;
-        
-        overflow: hidden;
-        transition: all 0.3s ease;
         z-index: 120;
+    }
+    .hamburger {
+        position: absolute;
+        right: 1.4rem;
+        top: 1.4rem;
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+        width: 100%;
+        background-color: rgba(16, 16, 63, 1);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 1rem;
     }
 
     #navbar-container a{
         margin: .5rem;
     }
+    #nav-toggle:checked ~ .hamburger{
+        color: white;
+    }
 
-    #nav-toggle:checked ~ .menu{
-        height: 10rem;
+    header:has( #nav-toggle:checked ){
+        height: 25rem;
+        transition: all 0.3s ease;
+        padding-bottom: 0;
     }
 }
