@@ -11,11 +11,17 @@ header {
     padding: 1rem;
 }
 
+#logoa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo-img {
     height: 100%;
-    /* margin-left: -7rem; */
 }
 #navbar-container {
+    margin-top: 1rem;
     display: flex;
 }
 #nav-toggle {
@@ -94,9 +100,9 @@ footer a {
         align-items: center;
         overflow: hidden;
     }
+
     #logo-img {
         height: 3.2rem;
-        margin-bottom: .4rem;
     }
     #navbar-container {
         width:100%;
