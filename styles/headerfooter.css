@@ -40,7 +40,7 @@ header a {
 }
 
 header button {
-    padding: 1rem 1rem;
+    padding: .2rem 1rem;
     width: 12rem;
     font-size: x-large;
     background-color: rgba(255, 255, 255, 0.2);
@@ -105,10 +105,39 @@ footer a {
         z-index: 120;
     }
     .hamburger {
+        cursor: pointer;
         position: absolute;
-        right: 1.4rem;
-        top: 1.4rem;
-        display: block;
+        right: 1.6rem;
+        top: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 2rem;
+        width:  2rem;
+    }
+    .hamburger div {
+        background-color: azure;
+        position: relative;
+        width: auto;
+        height: 4px;
+        transition: all 0.2s ease-in-out;
+        border: none;
+        border-radius: .5rem;
+    }
+    #nav-toggle:checked + .hamburger .top {
+        transform: translate(0, .67rem) rotate(-45deg);
+
+    }
+    .hamburger:has(#nav-toggle:checked) {
+        overflow: hidden ;
+    }
+
+    #nav-toggle:checked + .hamburger .meat {
+        transform: rotate(45deg);
+    }
+
+    #nav-toggle:checked + .hamburger .bottom {
+        transform: scale(0);
     }
 
     .menu {
