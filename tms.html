@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/headerfooter.css">
     <link rel="stylesheet" href="./styles/conv-dialog.css">
     <script src="./scripts/conv-dialog.js"></script>
+    <script src="./dist/bundle.js"></script>
     <link rel="stylesheet" href="./styles/tms.css">
   </head>
   <body>
@@ -75,13 +76,13 @@
                 <h3>Contact Us</h3>
             </div>
             <form id="contact-form" action="/submit-p-form" method="dialog">
-                <select>
+                <select class="location">
                     <option value="default">  Location</option>
                     <option>Los Angeles</option>
                     <option>UCLA</option>
                     <option>New York</option>
                 </select>
-                <select>
+                <select class="returning">
                     <option value="default">  Returning Patient?</option>
                     <option>Yes, I am returning</option>
                     <option>No, I am a new patient</option>

@@ -31,23 +31,26 @@ async function submitInfo(info) {
 }
 
 function initSubmit() {
-  const formElem = document.querySelector("form");
-  if (!formElem) {return;}
-  formElem.addEventListener("submit", (e) => {
-    e.preventDefault();
-    new FormData(formElem);
-  });
+  const formElems = document.querySelectorAll("form");
 
-  formElem.addEventListener("formdata", (e) => {
-    const date = new Date().toLocaleString("en-US");
-    const data = e.formData;
-    var loc = formElem.querySelector('select.location').value;
-    var retun = formElem.querySelector('select.returning').value;
-    data.append("location", loc);
-    data.append("new-patient", retun);
-    data.append("updated-time", date )
-    submitInfo(data);
-    // var json = JSON.stringify(object);
+  if (!formElems) {return;}
+  formElems.forEach((formElem) => {
+    console.log(formElem);
+    formElem.addEventListener("submit", (e) => {
+      e.preventDefault();
+      new FormData(formElem);
+    });
+
+    formElem.addEventListener("formdata", (e) => {
+      const date = new Date().toLocaleString("en-US");
+      const data = e.formData;
+      var loc = formElem.querySelector('select.location').value;
+      var retun = formElem.querySelector('select.returning').value;
+      data.append("location", loc);
+      data.append("new-patient", retun);
+      data.append("updated-time", date);
+      submitInfo(data);
+    });
   });
 }
 
