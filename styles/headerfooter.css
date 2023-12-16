@@ -11,18 +11,12 @@ header {
     padding: 1rem;
 }
 
-#logoa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #logo-img {
     height: 100%;
 }
 #navbar-container {
-    margin-top: 1rem;
     display: flex;
+    align-items: center;
 }
 #nav-toggle {
     display: none;
@@ -48,6 +42,7 @@ header a {
 header button {
     padding: .2rem 1rem;
     width: 12rem;
+    height: 3.5rem; 
     font-size: x-large;
     background-color: rgba(255, 255, 255, 0.2);
     color:white;
@@ -105,6 +100,7 @@ footer a {
         height: 3.2rem;
     }
     #navbar-container {
+        margin-top: 1rem;
         width:100%;
         height: auto;
         flex-direction: column;
@@ -164,7 +160,7 @@ footer a {
     }
 
     header:has( #nav-toggle:checked ){
-        height: 25rem;
+        height: 25.7rem;
         transition: all 0.3s ease;
         padding-bottom: 0;
     }
