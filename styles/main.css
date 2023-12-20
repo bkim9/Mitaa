@@ -98,15 +98,17 @@ h3 {
 
 /* steps or procedure */
 .steps-container {
+    max-width: 60rem;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .step-container {
     display: flex;
-    flex-direction: column;
-    padding: .5rem;
+    flex-direction: row;
+    padding: 1rem;
 }
 
 .steps-container img {
@@ -116,20 +118,23 @@ h3 {
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,.7));
     caption-side: bottom;
 }
+
 figcaption {
+    padding: 2rem;
     font-size: x-large;
 }
 a, a:hover, a:visited, a:active {
     color: inherit;
     text-decoration: none;
-   }
+}
+
 /* media query */
 
-@media screen and (max-width: 600px) {
-
+@media screen and (max-width: 800px) {
     #title-img-box {
         height:  30rem;
     } 
+
     .title-box {
         margin: 0;
         background-color: rgba(16, 16, 63, 0.7);
@@ -144,6 +149,7 @@ a, a:hover, a:visited, a:active {
         justify-content: center;
         align-items: center;
     }
+
     .title-box * {
         margin:.5rem;
     }
@@ -151,6 +157,7 @@ a, a:hover, a:visited, a:active {
     .title-box h1 {
         font-size: x-large;
     }
+
     .title-box h2 {
         font-size: large;
     }
