@@ -34,9 +34,9 @@
         "Medications side Effect"
     ],
     "memoryclinic": [
-        "Dr.Cho's evaluation for Memory loss",
-        "Special Lab test and PET Scan",
+        "Consultaion with Dr.Cho's evaluation for memory loss to check if the patient is eligable for the medication",
+        "lab tests involving PET scan to screen the patients by analyzing APoE4 level",
         "2 weeks later meet Dr.Cho",
-        "3 weeks Dr.Cho Treatment plans",
+        "3 weeks Dr.Cho Treatment plans"
     ]
 }
