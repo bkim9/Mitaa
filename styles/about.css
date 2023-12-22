@@ -1,0 +1,24 @@
+#abouts {
+    width: 80rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+#abouts > * {
+    padding: 1rem;
+}
+
+#abouts span {
+    display: block;
+    /* padding: 1rem; */
+    font-size: x-large;
+    margin: 1rem 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #abouts {
+        width:40rem;
+        flex-direction: column;
+    }
+}

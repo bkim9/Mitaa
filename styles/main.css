@@ -60,6 +60,7 @@ main {
     border-color: white;
     border-width: 1px;
 }
+
 h3 {
     font-size: xx-large;
 }
@@ -94,6 +95,14 @@ h3 {
 .desc-imgs img {
     float: right;
     width: 20rem;
+}
+
+#welcome {
+    padding: 3rem;
+    text-align: center;
+    font-size: xx-large;
+    color: gray;
+    line-height: 4rem;
 }
 
 /* steps or procedure */

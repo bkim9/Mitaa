@@ -39,7 +39,8 @@
 #partners {
     display: flex;
     flex-direction: row;
-    width: 80rem;
+    justify-content: center;
+    width: 100%;
 }
 
 #partners * {
@@ -64,4 +65,36 @@
 #other-logo{
     margin: 1.5rem 1rem;
     width: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+
+    h2 {
+        display: none;
+    }
+    
+    #lower-bio {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #lower-bio img {
+        width: 100%;
+    }
+    
+
+
+    #cedars-logo{
+        width: 15rem;
+    }
+    
+    #ucla-logo{
+        width: 15rem;
+    }
+    
+    #other-logo{
+        width: 5rem;
+    }
 }
