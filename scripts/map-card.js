@@ -7,9 +7,9 @@ function init_map(idloc) {
         zoom: 16.5 
     });
 
-    const popup = new mapboxgl.Popup()
-        .setText('edsdklentrkle')
-        .addTo(map);
+    // const popup = new mapboxgl.Popup()
+    //     .setText('edsdklentrkle')
+    //     .addTo(map);
 
     const marker = new mapboxgl.Marker()
         .setLngLat(idloc.loc)
