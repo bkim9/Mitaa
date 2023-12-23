@@ -30,23 +30,7 @@ function init_maps(){
         loc: [-118.44479957192101, 34.05880536383019],
         name: 'Westwood Psychiatry',
         address: '10921 Wilshire Boulevard Suite 409A'
-    },
-    // {
-    //     id: 'korea',
-    //     loc: [ 126.97679382031701, 37.57601895641287]
-    // },
-    // {
-    //     id: 'newyork',
-    //     loc: [ -73.98423383780133, 40.74621462997445]
-    // },
-    // {
-    //     id: 'beijing',
-    //     loc: [116.40581652966317, 39.901391401191404]
-    // },
-    // {
-    //     id: 'hawai',
-    //     loc: [-157.69343021222505, 21.277280045060262]
-    // }
+    }
    ]
    for (const idLoc of idLocs) {
     init_map(idLoc);
