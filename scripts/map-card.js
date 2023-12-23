@@ -6,6 +6,11 @@ function init_map(idloc) {
         center: idloc.loc,
         zoom: 16.5 
     });
+
+    const popup = new mapboxgl.Popup()
+        .setText('edsdklentrkle')
+        .addTo(map);
+
     const marker = new mapboxgl.Marker()
         .setLngLat(idloc.loc)
         .addTo(map);
@@ -16,11 +21,15 @@ function init_maps(){
    idLocs= [
     {
         id: 'jkcmap',
-        loc: [-118.30722410802338, 34.06053851590417]
+        loc: [-118.30722410802338, 34.06053851590417],
+        name: 'JKC Neurology',
+        address: '3700 Wilshire Boulevard Suite 200'
     },
     {
         id: 'drkomap',
-        loc: [-118.44479957192101, 34.05880536383019]
+        loc: [-118.44479957192101, 34.05880536383019],
+        name: 'Westwood Psychiatry',
+        address: '10921 Wilshire Boulevard Suite 409A'
     },
     // {
     //     id: 'korea',
