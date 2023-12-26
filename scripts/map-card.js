@@ -7,14 +7,47 @@ function init_map(idloc) {
         zoom: 16.5 
     });
 
-    // const popup = new mapboxgl.Popup()
-    //     .setText('edsdklentrkle')
-    //     .addTo(map);
+    const places = {
+        'type': 'FeatureCollection',
+        'features': [
+        {
+        'type': 'Feature',
+        'properties': {
+        'description': idloc.name,
+        'icon': 'theatre'
+        },
+        'geometry': {
+        'type': 'Point',
+        'coordinates': idloc.loc
+        }
+        }
+        ]
+        };
 
     const marker = new mapboxgl.Marker()
         .setLngLat(idloc.loc)
         .addTo(map);
     map.addControl(new mapboxgl.FullscreenControl());
+    map.on('load', () => {
+        map.addSource('places', {
+            'type' : 'geojson',
+            'data' : places
+        });
+
+        map.addLayer({
+            'id' : 'poi-labels',
+            'type' : 'symbol',
+            'source': 'places',
+            'layout': {
+                'text-field': ['get', 'description'],
+                'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+                'text-radial-offset': 0.5,
+                'text-justify': 'auto',
+                'icon-image': ['get', 'icon']
+            }
+        })
+    })
+
 }
 
 function init_maps(){    
