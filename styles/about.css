@@ -15,7 +15,11 @@
     margin: 1rem 0;
 }
 
+#about-left {
+    width: 50rem;
+}
 
+/* .providersconta? */
 @media screen and (max-width: 1000px) {
     #abouts {
         width:40rem;
