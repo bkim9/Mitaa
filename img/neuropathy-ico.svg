@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 613 613">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #0f0f3a;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-4 {
+        stroke-width: 25px;
+      }
+
+      .cls-2 {
+        stroke-width: 10px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x=".5" y=".5" width="612" height="612"/>
+  <ellipse class="cls-4" cx="306.5" cy="158.09" rx="36.36" ry="35.77"/>
+  <ellipse class="cls-2" cx="171.74" cy="217.6" rx="36.36" ry="35.77"/>
+  <ellipse class="cls-2" cx="441.03" cy="217.6" rx="36.36" ry="35.77"/>
+  <ellipse class="cls-2" cx="248.69" cy="454.91" rx="36.36" ry="35.77"/>
+  <ellipse class="cls-2" cx="360.92" cy="454.91" rx="34.97" ry="35.77"/>
+  <line class="cls-1" x1="171.74" y1="217.6" x2="303.48" y2="239.76"/>
+  <line class="cls-1" x1="311.84" y1="239.76" x2="441.03" y2="217.6"/>
+  <line class="cls-1" x1="306.5" y1="323.04" x2="306.5" y2="198.42"/>
+  <line class="cls-1" x1="248.69" y1="454.91" x2="306.39" y2="325.85"/>
+  <line class="cls-1" x1="360.92" y1="454.91" x2="306.39" y2="325.85"/>
+</svg>
