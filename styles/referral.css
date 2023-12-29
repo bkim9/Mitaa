@@ -4,6 +4,7 @@
     padding: 1rem;
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
+    row-gap: .4rem;
 }
 #referral-form > div {
     margin: .25rem;
