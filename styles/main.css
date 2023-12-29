@@ -60,11 +60,11 @@ main {
     border-color: white;
     border-width: 1px;
 }
-
-h2 {
-    font-size: xx-large;
+.title-box h2,
+#under-nav h2 {
+    font-size: x-large;
 }
-
+h2 ,
 h3 {
     font-size: xx-large;
 }
