@@ -38,3 +38,15 @@
     background-color: rgb(86, 86, 148);
     color:white;
 }
+
+@media screen and (max-width: 1000px) {
+    #referral-form {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #referral-form > div {
+        width: 23rem ;
+    }
+}
