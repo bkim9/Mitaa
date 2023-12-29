@@ -64,3 +64,11 @@
     grid-area: steps-content;
     font-size: x-large;
 }
+
+@media screen and (max-width: 1000px) {
+    .extep {
+        display: flex;
+        flex-direction: column;
+        width:40rem;
+    }
+}

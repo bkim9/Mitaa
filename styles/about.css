@@ -25,4 +25,7 @@
         width:40rem;
         flex-direction: column;
     }
+    #about-left {
+        width: 40rem;
+    }
 }
