@@ -55,13 +55,13 @@ function init_maps(){
     {
         id: 'jkcmap',
         loc: [-118.30722410802338, 34.06053851590417],
-        name: 'JKC Neurology',
+        name: 'JKC Neurology\n 3700 Wilshire Blvd Suite 200',
         address: '3700 Wilshire Boulevard Suite 200'
     },
     {
         id: 'drkomap',
         loc: [-118.44479957192101, 34.05880536383019],
-        name: 'Westwood Psychiatry',
+        name: 'Westwood Psychiatry\n 10921 Wilshire Blvd Suite 409A',
         address: '10921 Wilshire Boulevard Suite 409A'
     }
    ]
