@@ -54,16 +54,7 @@ function initSubmit() {
   });
 }
 
-// function initInbox() {
-//   localStorage.setItem("myCat", "Tom");
-// }
-
 window.addEventListener("DOMContentLoaded", initSubmit);
-
-
-
-
-
 
 // function sendEmail(name, email, message) {
 //     email.send({
