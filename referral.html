@@ -52,7 +52,7 @@
         </div>
         <div>
           <h4>Location</h4>
-          <select>
+          <select class="location">
               <option value="default">  Location</option>
               <option>Los Angeles</option>
               <option>UCLA</option>
@@ -62,11 +62,11 @@
           
         <div>
           <h4>Patient First Name</h4> 
-          <input type="text" id="name" name="name" placeholder="Patient First Name">    
+          <input type="text" id="patient-fname" name="patient-fname" placeholder="Patient First Name">    
         </div>
         <div>
           <h4>Patient Last Name</h4> 
-          <input type="text" id="name" name="name" placeholder="Patient Last Name">
+          <input type="text" id="patient-lname" name="patient-lname" placeholder="Patient Last Name">
         </div>
         <div>
           <h4>Patient Email</h4>
@@ -118,45 +118,45 @@
         <div>
           <h4>Reason for Referral</h4>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Headaches</label>
+            <input type="checkbox" class="reason" name="reason-headache" checked />
+            <label for="reason-headache">Headaches</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Alzheimer's Disease</label>
+            <input type="checkbox" class="reason" name="reason-alzheimer" checked />
+            <label for="reason-alzheimer">Alzheimer's Disease</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Neck Pain</label>
+            <input type="checkbox" class="reason" name="reason-neck" checked />
+            <label for="reason-neck">Neck Pain</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Insomnia</label>
+            <input type="checkbox" class="reason" name="reason-insomnia" checked />
+            <label for="reason-insomnia">Insomnia</label>
           </div>
         </div>
         <div>
           <h4>Service Requested</h4>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">TMS</label>
+            <input type="checkbox" class="reason" name="service-tms" checked />
+            <label for="service-tms">TMS</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">EEG</label>
+            <input type="checkbox" class="reason" name="service-eeg" checked />
+            <label for="reasonservice-eeg">EEG</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Hyperbaric Oxygen Therapy</label>
+            <input type="checkbox" class="reason" name="service-hot" checked />
+            <label for="service-hot">Hyperbaric Oxygen Therapy</label>
           </div>        <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Lequembi</label>
+            <input type="checkbox" class="reason" name="service-leqembi" checked />
+            <label for="service-leqembi">Lequembi</label>
           </div>
           <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">Specialty Treatments</label>
+            <input type="checkbox" class="reason" name="service-special" checked />
+            <label for="service-special">Specialty Treatments</label>
           </div>        <div>
-            <input type="checkbox" class="reason" name="reason" checked />
-            <label for="reason">other</label>
+            <input type="checkbox" class="reason" name="service-other" checked />
+            <label for="service-other">other</label>
           </div>  
         </div>
         <div>
@@ -176,7 +176,7 @@
             <label for="kor">Korean</label>
           </div>
           <div>
-            <input type="checkbox" id="kor" name="kor" />
+            <input type="checkbox" id="oth" name="oth" />
             <label for="oth">Other</label>
           </div>
         </div>
