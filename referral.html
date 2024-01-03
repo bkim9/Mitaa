@@ -48,7 +48,7 @@
       <form id="referral-form" action="/submit-p-form">
         <div>
           <h4>Today's Date</h4>
-          <input type="date" id="today" name="today" placeholder="Todays Date (MM/DD/YY)" />
+          <input type="date" id="submit-day" name="submit-day" placeholder="Todays Date (MM/DD/YY)" />
         </div>
         <div>
           <h4>Location</h4>
@@ -79,14 +79,14 @@
 
         <div>
           <h4>Date of Birth (MM/DD/YY)</h4>
-          <input type="date" id="dob" name="dob" placeholder="Date of Birth (MM/DD/YY)" />
+          <input type="date" id="patient-dob" name="patient-dob" placeholder="Date of Birth (MM/DD/YY)" />
         </div>
         <!-- gender -->
         <div>
           <h4>Gender*</h4>
           <div>
-            <input type="checkbox" id="male" name="male" checked />
-            <label for="male">Male</label>
+            <input type="checkbox" id="patient-male" name="patient-male" checked />
+            <label for="patinet-male">Male</label>
           </div>
         
           <div>
@@ -96,7 +96,7 @@
         </div>
         <div>
           <h4>Referring Facility Name</h4>
-          <input type="text" id="facility-name" name="facility-name" placeholder="Referring Facility Name">
+          <input type="text" id="doctor-facility" name="doctor-facility" placeholder="Referring Facility Name">
         </div>
         <div>
           <h4>Referring Doctor Name</h4>
@@ -112,8 +112,8 @@
         </div>
     
         <div>
-          <h4>Submitting Person's Name</h4>
-          <input type="text" id="submiter-name" name="submiter-name" placeholder="Form Submiter Name*">
+          <h4>Submitting Person's Name*</h4>
+          <input type="text" id="submitter-name" name="submitter-name" placeholder="Form Submitter's Name">
         </div>
         <div>
           <h4>Reason for Referral</h4>
@@ -162,28 +162,28 @@
         <div>
           <h4>Patient Preferred Language</h4>
           <div>
-            <input type="checkbox" id="eng" name="eng" checked />
-            <label for="eng">English</label>
+            <input type="checkbox" id="lan-eng" name="lan-eng" checked />
+            <label for="lan-eng">English</label>
           </div>
         
           <div>
-            <input type="checkbox" id="spa" name="spa" />
-            <label for="spa">Spanish</label>
+            <input type="checkbox" id="lan-spa" name="lan-spa" />
+            <label for="lan-spa">Spanish</label>
           </div>
 
           <div>
-            <input type="checkbox" id="kor" name="kor" />
-            <label for="kor">Korean</label>
+            <input type="checkbox" id="lan-kor" name="lan-kor" />
+            <label for="lan-kor">Korean</label>
           </div>
           <div>
-            <input type="checkbox" id="oth" name="oth" />
-            <label for="oth">Other</label>
+            <input type="checkbox" id="lan-oth" name="lan-oth" />
+            <label for="lan-oth">Other</label>
           </div>
         </div>
         <div>
 
           <h4>Any Other Symptoms?</h4>
-          <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+          <textarea id="patient-story" name="patient-story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
         </div>
 
 
