@@ -27,21 +27,64 @@ const db  = getFirestore(app);
 
 function displayItem(item) {
     const itemData = item.data()
-    const inboxE = document.querySelector('#inboxes');
+    const appointmentInboxE = document.querySelector('#inboxes-appointment');
+    const referralInboxE = document.querySelector('#inboxes-referral');
     // CreateElement
-    if (inboxE && "content" in document.createElement("template")) {
-        const template = document.querySelector("#inbox-template");
-        // Clone
-        console.log(template);
-        const clone = template.content.cloneNode(true);
-        clone.querySelector('.update-time').textContent = itemData["updated-time"];
-        clone.querySelector('.name'       ).textContent = itemData.name
-        clone.querySelector('.new-patient').textContent = itemData["new-patient"];
-        clone.querySelector('.email'      ).textContent = itemData.email
-        clone.querySelector('.location'   ).textContent = itemData.location
-        clone.querySelector('.mobile'     ).textContent = itemData.mobile
-        clone.querySelector('.note'       ).textContent = itemData.story
-        inboxE.appendChild(clone);
+    if (appointmentInboxE && referralInboxE && "content" in document.createElement("template")) {
+        if( itemData["doctor-name"] ) {
+            const template = document.querySelector("#inbox-referral-template");
+            // Clone
+            console.log(template);
+            const clone = template.content.cloneNode(true);
+            clone.querySelector('.update-time').textContent = itemData["updated-time"];
+            clone.querySelector('.doctor-email').textContent = itemData['doctor-email'];
+            clone.querySelector('.doctor-facility').textContent = itemData['doctor-facility'];
+            clone.querySelector('.doctor-name').textContent = itemData['doctor-name'];
+            clone.querySelector('.doctor-tel').textContent = itemData['doctor-tel'];
+            clone.querySelector('.lan-eng').textContent = itemData['lan-eng'];
+            clone.querySelector('.lan-kor').textContent = itemData['lan-kor'];
+            clone.querySelector('.lan-oth').textContent = itemData['lan-oth'];
+            clone.querySelector('.location').textContent = itemData['location'];
+            
+            clone.querySelector('.patient-dob').textContent = itemData['patient-dob'];
+            clone.querySelector('.patient-email').textContent = itemData['patient-email'];
+            clone.querySelector('.patient-dob').textContent = itemData['patient-dob'];
+            clone.querySelector('.patient-email').textContent = itemData['patient-email'];
+            clone.querySelector('.patient-name').textContent = itemData['patient-fname'] + ' ' + itemData['patient-lname'];
+            clone.querySelector('.patient-gender').textContent = itemData['patient-male'];
+            clone.querySelector('.patient-story').textContent = itemData['patient-story'];
+            clone.querySelector('.patient-tel').textContent = itemData['patient-tel'];
+
+            clone.querySelector('.reasons').textContent = 'line 58';
+            // clone.querySelector('reason-alzheimer').textContent = itemData['reason-alzheimer'];
+            // clone.querySelector('reason-headache').textContent = itemData['reason-headache'];
+            // clone.querySelector('reason-insomnia').textContent = itemData['reason-insomnia'];
+            // clone.querySelector('reason-neck').textContent = itemData['reason-neck'];
+
+            clone.querySelector('.services-requested').textContent = 'line64';
+            // clone.querySelector('service-eeg').textContent = itemData['service-eeg'];
+            // clone.querySelector('service-hot').textContent = itemData['service-hot'];
+            // clone.querySelector('service-leqembi').textContent = itemData['service-leqembi'];
+            // clone.querySelector('service-other').textContent = itemData['service-other'];
+            // clone.querySelector('service-special').textContent = itemData['service-special'];
+            // clone.querySelector('service-tms').textContent = itemData['service-tms'];
+
+            clone.querySelector('.submitter-name').textContent = itemData['submitter-name'];
+            referralInboxE.appendChild(clone);        
+        }else {
+            const template = document.querySelector("#inbox-appointment-template");
+            // Clone
+            console.log(template);
+            const clone = template.content.cloneNode(true);
+            clone.querySelector('.update-time').textContent = itemData["updated-time"];
+            clone.querySelector('.name'       ).textContent = itemData["doctor-name"];
+            clone.querySelector('.new-patient').textContent = itemData["new-patient"];
+            clone.querySelector('.email'      ).textContent = itemData.email
+            clone.querySelector('.location'   ).textContent = itemData.location
+            clone.querySelector('.mobile'     ).textContent = itemData.mobile
+            clone.querySelector('.note'       ).textContent = itemData.story
+            appointmentInboxE.appendChild(clone);
+        }
     }
 }
 

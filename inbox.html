@@ -14,8 +14,8 @@
     <script src="./dist/bundle.js"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <!-- <script src="./scripts/main.js" type="module"></script> -->
-    <template id="inbox-template">
+
+    <template id="inbox-appointment-template">
       <ul class="inbox-doc">
         <li class="update-time">12/13/2023, 10:43:32 AM</li>
         <li class="name">Sam Smith</li>
@@ -27,7 +27,35 @@
       <span class="note">I have terrible neuropathy issue. The medication is not working right now. I need more advanced treatment than the one I am taking now.</span>
     </template>
 
+    <template id="inbox-referral-template">
+      <ul class="inbox-doc">
+        <li class="update-time">12/13/2023, 10:43:32 AM</li>
+        <li class="doctor-email">sam@ulcle.com</li>
+        <li class="doctor-facility">Cedars Sinai</li>
+        <li class="doctor-name">Honey Moon</li>
+        <li class="doctor-tel">012345689</li>
+        <li class="lan-eng">on</li>
+        <li class="lan-kor">on</li>
+        <li class="lan-spa">on</li>
+        <li class="lan-oth">on</li>
+        <li class="location">Los Angeles</li>
+        <li class="patient-dob">2024-01-11</li>
+        <li class="patient-email">kbs@mitaa.com</li>
+        <li class="patient-name">Butter Kim</li>
+        <li class="patient-gender">Male</li>
+        <li class="patient-story">I want the medication</li>
+        <li class="patient-tel">0607005454</li>        
+        <li class="submitter-name">Tyler Lee</li>
+      </ul>
+      <ul class="reasons">
 
+
+
+      </ul>
+      <ul class="services-requested">
+        
+      </ul>
+     </template>
 
 
   </head>
@@ -59,10 +87,20 @@
         <h2>3700 Wilshire Blvd Suite 200, 90010</h2>
       </div>
 
-      <!-- Inbox -->
-      <h2 class="subtitle">Inbox</h2>
+      <!-- Inbox Appointment -->
+      <h2 class="subtitle">Appointment Inbox</h2>
       <hr class="divider"/>
-      <div id="inboxes">
+      <div id="inboxes-appointment">
+
+
+
+
+      </div>
+
+      <!-- Inbox Referral -->
+      <h2 class="subtitle">Referral Inbox</h2>
+      <div id="inboxes-referral">
+
 
 
 
