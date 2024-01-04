@@ -71,7 +71,7 @@ function displayItem(item) {
 
             clone.querySelector('.submitter-name').textContent = itemData['submitter-name'];
             referralInboxE.appendChild(clone);        
-        }else {
+        } else {
             const template = document.querySelector("#inbox-appointment-template");
             // Clone
             console.log(template);
