@@ -18,6 +18,10 @@
     width: 30rem;
 } */
 
+ul ul {
+    margin-top: 1rem;
+}
+
 
 summary::marker {
     display: none;
