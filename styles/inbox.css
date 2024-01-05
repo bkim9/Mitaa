@@ -1,4 +1,12 @@
-.inbox-doc {
+.inbox-appointment {
+    width: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: .4rem;
+}
+
+.inbox-referral {
     width: 90vh;
     display: flex;
     flex-direction: row;
@@ -7,7 +15,5 @@
 }
 
 .referral-detail {
-    position: fixed;
-    right: 0;
     width: 30rem;
 }

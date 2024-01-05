@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
     <template id="inbox-appointment-template">
-      <ul class="inbox-doc">
+      
+      <ul class="inbox-appointment">
         <li class="update-time">12/13/2023, 10:43:32 AM</li>
         <li class="name">Sam Smith</li>
         <li class="new-patient">Yes, I am returning</li>
@@ -28,13 +29,13 @@
     </template>
 
     <template id="inbox-referral-template">
-      <ul class="inbox-doc">
+      <ul class="inbox-referral">
         <li class="update-time">12/13/2023, 10:43:32 AM</li>
         <li class="patient-name">Butter Kim</li>
         <li class="doctor-name">Honey Moon</li>
         <!-- show detail toggle -->
-
-        <div class="referral-detail" >
+        <details class="referral-detail" >
+          <summary>Details</summary>
           <li class="lan-eng">on</li>
           <li class="lan-kor">on</li>
           <li class="lan-spa">on</li>
@@ -53,9 +54,8 @@
           </ul>
           <ul class="services-requested">
           </ul>
-        </div>
+        </details>
       </ul>
-
      </template>
 
 
