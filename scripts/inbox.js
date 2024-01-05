@@ -54,10 +54,12 @@ function displayItem(item) {
             clone.querySelector('.doctor-tel').textContent = itemData['doctor-tel'];
 
             
+            const gender = ( itemData['patient-male'] )? 'Male': 'Female';
+
             clone.querySelector('.patient-dob').textContent = itemData['patient-dob'];
             clone.querySelector('.patient-tel').textContent = itemData['patient-tel'];
             clone.querySelector('.patient-email').textContent = itemData['patient-email'];
-            clone.querySelector('.patient-gender').textContent = itemData['patient-male'];
+            clone.querySelector('.patient-gender').textContent = gender;
             clone.querySelector('.patient-story').textContent = itemData['patient-story'];
 
             const reasonsEl = clone.querySelector('.reasons');
@@ -80,7 +82,7 @@ function displayItem(item) {
             appendLi(languagesEl, itemData, 'lan-kor', 'Korean');
             appendLi(languagesEl, itemData, 'lan-spa', 'Spanish');
             appendLi(languagesEl, itemData, 'lan-oth', 'Other');
-            
+
             clone.querySelector('.submitter-name').textContent = itemData['submitter-name'];
             referralInboxE.appendChild(clone);        
         } else {

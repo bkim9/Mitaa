@@ -28,6 +28,7 @@ async function submitInfo(info) {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
+  alert('Submitted');
 }
 
 function initSubmit() {
@@ -49,25 +50,9 @@ function initSubmit() {
       let retun = '';
       if ( retunEl ) retun = retunEl.value;
       
-
-      // // for referral form
-      // let pfn      = formElem.querySelector('#patient-fname').value;
-      // let pln      = formElem.querySelector('#patient-lname').value;
-      // let pEmail   = formElem.querySelector('#patient-email').value;
-      // let pPhone   = formElem.querySelector('#patient-tel').value;
-      // let pDob     = formElem.querySelector('#dob').value;
-      // let pGender  = formElem.querySelector('')
-      // let facility = formElem.querySelector('#facility-name').value;
-      // let dName    = formElem.querySelector('#doctor-name').value;
-      // let dPhon    = formElem.querySelector('#doctor-tel').value;
-      // let dEmail   = formElem.querySelector('#doctor-email').value;
-      // let submiter = formElem.querySelector('#submiter-name').value;
-      // let story = formElem.querySelector('#story').value;
-
       data.append("location", loc);
       data.append("new-patient", retun);
       data.append("updated-time", date);
-      console.log(data);
       submitInfo(data);
     });
   });
