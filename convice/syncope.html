@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Mitaa Memory Clinic</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/headerfooter.css">
+    <link rel="stylesheet" href="../styles/conv-dialog.css">
+    <script src="../scripts/conv-dialog.js"></script>
+    <script src="../dist/bundle.js"></script>
+    <link rel="stylesheet" href="../styles/tms.css">
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+        <a href="../index.html" ><img class="logo" id="logo-img" src="../img/mglogo.svg" alt="logo" /> </a>
+        <nav id="navbar-container">
+          <input id="nav-toggle" type="checkbox"/>
+          <label class="hamburger" for="nav-toggle">
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+          </label>
+          <nav class="menu">
+            <a href="../index.html">Home</a>
+            <a href="../bio.html">Bio</a>
+            <a href="../about.html">About</a>
+            <a href="../services.html">Services</a>
+            <a href="../convice/tms.html">TMS</a>
+            <a href="../contacts.html">Contacts</a>
+            <button onclick="location.href='../referral.html'">Patient Referral</button>
+          </nav>
+        </nav>
+      </header>
+    <main>
+        <div id="under-nav">
+          <h1>Syncope</h1>
+          <!-- <h2>and our Treatment</h2> -->
+        </div>
+
+        
+        <span class="desc-text" id="tms-desc">
+        <h3 class="desc-title">Syncope</h3>
+        <!-- <img class="desc-img" src="img/tms_img.webp" alt="image of tms result"> -->
+
+        Neuropathy, also known as peripheral neuropathy, is a condition that involves damage or dysfunction of the peripheral nerves, which are the nerves outside of the brain and spinal cord. These nerves play a crucial role in transmitting signals between the central nervous system (the brain and spinal cord) and the rest of the body, including the limbs, organs, and skin.
+            <br />
+    
+        Neuropathy can affect various types of nerves, including sensory, motor, and autonomic nerves. This can lead to a wide range of symptoms, depending on the type of nerve that is affected. Common symptoms of neuropathy include:
+
+        <ol>
+            <li><b>Numbness or tingling: </b>Many people with neuropathy experience a sensation of numbness, tingling, or a "pins and needles" feeling in the affected areas, often in the hands and feet.</li>
+            <li><b>Weakness: </b>Muscle weakness, especially in the extremities, is another common symptom.</li>
+            <li><b>Pain: </b>Neuropathic pain can be sharp, burning, stabbing, or shooting in nature. This pain is often chronic and can be quite severe.</li>
+            <li><b>Loss of coordination: </b>Neuropathy can affect motor nerves, leading to difficulties with coordination and balance.</li>
+            <li><b>Sensitivity to touch or temperature: </b>Some individuals with neuropathy may find that they are overly sensitive to touch or temperature changes.</li>
+            <li><b>Autonomic symptoms: </b>Autonomic nerves control involuntary bodily functions such as heart rate, blood pressure, digestion, and breathing. Neuropathy affecting these nerves can lead to symptoms like changes in heart rate, blood pressure, sweating, and digestion.</li>
+            <li><b>Muscle atrophy: </b>Prolonged nerve damage can lead to muscle wasting or atrophy, especially in the limbs.</li>
+        </ol>
+        
+        <br /><br />Neuropathy can have various underlying causes, including:
+
+        <ul>
+            <li><b>Diabetes: </b>Diabetic neuropathy is one of the most common causes of neuropathy and is associated with long-term high blood sugar levels.</li>
+            <li><b>Vitamin deficiencies: </b>A lack of certain vitamins, particularly vitamin B12, can contribute to nerve damage.</li>
+            <li><b>Infections: </b>Infections such as Lyme disease, shingles (varicella-zoster virus), and HIV can lead to neuropathy.
+            </li>
+            <li><b>Toxic exposure: </b>Exposure to certain chemicals, medications (like chemotherapy drugs), and heavy metals can damage nerves.</li>
+            <li><b>Autoimmune disorders: </b>Conditions like Guillain-Barré syndrome and lupus can lead to nerve damage due to the immune system attacking the body's own tissues.</li>
+            <li><b>Trauma: </b>Physical injuries or trauma, such as car accidents or falls, can damage nerves.</li>
+            <li><b>Heredity: </b>Some forms of neuropathy are hereditary and run in families.</li>
+        </ul>
+
+        Treatment of neuropathy depends on the underlying cause and the specific symptoms experienced by the individual. Management strategies may include addressing the underlying condition, managing pain, physical therapy, lifestyle changes, and medications to alleviate symptoms and promote nerve healing when possible. 
+
+        <br /><br />
+        If you or someone you know is experiencing symptoms of neuropathy, please <a href="../contacts.html">contact JKC Clinic</a> through phone or online for proper diagnosis and treatment recommendations tailored to your specific situation. 
+
+
+
+        </span>
+
+        <dialog id="conv-dialog">
+            <button id="conv-close-button">x</button>
+            <div id="dialog-header">
+                <h3>Contact Us</h3>
+            </div>
+            <form id="contact-form" action="/submit-p-form" method="dialog">
+                <select class="location">
+                    <option value="default">  Location</option>
+                    <option>Los Angeles</option>
+                    <option>UCLA</option>
+                    <option>New York</option>
+                </select>
+                <select class="returning">
+                    <option value="default">  Returning Patient?</option>
+                    <option>Yes, I am returning</option>
+                    <option>No, I am a new patient</option>
+                </select>
+                <input type="text" id="name" name="name" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+                <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+                <input id="conv-submit-button" type="submit" value="Submit">
+            </form>
+            <p id="contact-warning">
+                By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+            </p>
+        </dialog>
+          
+        <button id="conv-button">
+            <svg
+                viewBox="-10 -14 44 70" 
+                width="100" height="100"
+                fill-rule="evenodd" 
+                clip-rule="evenodd">
+                <path 
+                    stroke="rgba(255, 255, 255, 1)" 
+                    stroke-width="1.5" 
+                    d="M12 1c-6.338 0-12 4.226-12 10.007 0 2.05.739 4.063 2.047 5.625l-1.993 6.368 6.946-3c1.705.439 3.334.641 4.864.641 7.174 0 12.136-4.439 12.136-9.634 0-5.812-5.701-10.007-12-10.007m0 1c6.065 0 11 4.041 11 9.007 0 4.922-4.787 8.634-11.136 8.634-1.881 0-3.401-.299-4.946-.695l-5.258 2.271 1.505-4.808c-1.308-1.564-2.165-3.128-2.165-5.402 0-4.966 4.935-9.007 11-9.007"
+                />
+            </svg>
+        </button>
+
+    </main>
+    <footer>
+      <address id="contacts">
+          <p>3700 Wilshire Blvd, Suite 200 </p>
+          <p>Los Angeles, CA 90010 <br /></p>
+          <a href="mailto:info@mitaa.com">info@mitaa.com</a>
+          <a href="tel:+1213-487-3060">213-487-3060</a>
+          <p>213-388-7168 (Fax)</p>
+      </address>
+  </footer>
+  </body>
+</html>
