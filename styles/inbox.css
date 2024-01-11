@@ -1,24 +1,58 @@
+h2 {
+    margin: 1rem;
+}
+.inbox-appointment, .note, .inbox-referral {
+    width: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: .4rem;
+    border-radius: .5rem;
+}
+
 .inbox-appointment {
-    width: 90vh;
+    background-color: rgba(16, 16, 63, 0.7);
+}
+.note {
+    min-height: 2rem;
+}
+
+
+.inbox-appointment > * {
+    padding: .5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    padding: .4rem;
+    justify-content: flex-start;
+    color: white;
 }
 
-.inbox-referral {
-    width: 90vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: .4rem;
+.edit-button {
+    background-color: white;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 1rem;
+    border: none;
 }
 
-
-ul ul {
-    margin-top: 1rem;
+li.update-time {
+    width: 12rem;
 }
 
+li.name, li.patient-name {
+    width: 8rem;
+}
+
+li.new-patient {
+    width: 11rem;
+}
+
+li.email {
+    width: 8rem
+}
+
+li.location {
+    width:6rem;
+}
 
 summary::marker {
     display: none;
