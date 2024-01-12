@@ -1,0 +1,27 @@
+#auth-form {
+    padding: 1rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="password"] {
+    width: 20rem;
+    height: 2rem;
+    margin: .2rem;
+    padding: .2rem;
+}
+
+input[type="submit"], #google-signin-button {
+    width: 20.7rem;
+    height: 2.3rem;
+    margin: .2rem;
+    border: none;
+    border-radius: .2rem;
+    color: white;
+    background-color: rgb(86, 86, 148);
+    font-size: larger;
+}
+
+#google-signin-button {
+    background-color: rgb(98, 98, 170);
+}

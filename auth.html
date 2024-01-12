@@ -1,0 +1,61 @@
+        
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Main Stylesheet & Scripts -->
+
+  <head>
+    <meta chartset="UTF-8" />
+    <title>Mitaa Memory Clinic</title>
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/headerfooter.css">
+    <link rel="stylesheet" href="./styles/auth.css">
+
+    <script src="./dist/bundle.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  </head>
+  <body>
+    <!-- Header holds logo and appname -->
+    <header>
+        <a href="./index.html" ><img class="logo" id="logo-img" src="./img/mglogo.svg" alt="logo" /> </a>
+        <nav id="navbar-container">
+          <input id="nav-toggle" type="checkbox"/>
+          <label class="hamburger" for="nav-toggle">
+            <div class="top"></div>
+            <div class="meat"></div>
+            <div class="bottom"></div>
+          </label>
+          <nav class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./bio.html">Bio</a>
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./convice/tms.html">TMS</a>
+            <a href="./contacts.html">Contacts</a>
+            <button onclick="location.href='./referral.html'">Patient Referral</button>
+          </nav>
+        </nav>
+    </header>
+    <main>        
+      <div id="under-nav">
+        <h1>Auth</h1>
+      </div>
+      <form action="auth-form" id="auth-form">
+        <input type="text" id="user-email" name="user-email" placeholder="user-email">
+        <input type="password" id="password" name="password" placeholder="password">
+        <input type="submit" id="submit" name="submit" value="submit">
+      </form>
+      <button id="google-signin-button" name="google-signin-button">Sign In with Google</button>
+    </main>
+    <footer>
+        <address id="contacts">
+            <p>3700 Wilshire Blvd, Suite 200 </p>
+            <p>Los Angeles, CA 90010 <br /></p>
+            <a href="mailto:info@mitaa.com">info@mitaa.com</a>
+            <a href="tel:+1213-487-3060">213-487-3060</a>
+            <p>213-388-7168 (Fax)</p>
+        </address>
+    </footer>
+  </body>
+</html>
