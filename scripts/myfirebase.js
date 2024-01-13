@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import { collection, addDoc, getDoc} from "firebase/firestore"; 
 
 // Your web app's Firebase configuration
@@ -20,6 +20,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
+onAuthStateChanged(auth, user => { /* check status */ });
 
 function signinInfo(data) {
       console.log(data);
@@ -28,6 +29,7 @@ function signinInfo(data) {
           // Signed in
           const user = userCredential.user;
           alert('Hello Beomsu Nice!');
+          console.log(user);
       })
       .catch((error) => {
           const errorCode = error.code;

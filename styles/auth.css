@@ -4,6 +4,8 @@
     flex-direction: column;
 }
 
+
+
 input[type="text"], input[type="password"] {
     width: 20rem;
     height: 2rem;
@@ -19,7 +21,6 @@ input[type="submit"], #google-signin-button {
     border-radius: .2rem;
     color: white;
     background-color: rgb(86, 86, 148);
-    font-size: larger;
 }
 
 #google-signin-button {
