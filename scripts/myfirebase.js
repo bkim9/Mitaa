@@ -20,7 +20,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-onAuthStateChanged(auth, user => { /* check status */ });
+onAuthStateChanged(auth, user => {
+   /* check status */
+    alert('check status') ;
+});
 
 function signinInfo(data) {
       console.log(data);
