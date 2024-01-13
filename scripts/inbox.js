@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth } from 'firebase/auth';
+
 import { getFirestore } from "firebase/firestore";
 import { collection, getDocs} from "firebase/firestore"; 
 
@@ -14,14 +14,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 const db  = getFirestore(app);
-
-var firebase = require('firebase');
-var firebaseui = require('firebaseui');
-
-// Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 // function clearItems(parent) {
 //     while (parent.hasChildNodes())

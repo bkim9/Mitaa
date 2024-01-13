@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc, getDoc} from "firebase/firestore"; 
 
 // Your web app's Firebase configuration
@@ -18,10 +19,24 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
-async function submitInfo(info) {
-  var object = {};
-  info.forEach((value, key) => object[key] = value);
+function signinInfo(data) {
+      console.log(data);
+      signInWithEmailAndPassword(auth, data['user-email'], data.password)
+      .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          alert('Hello Beomsu Nice!');
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert(errorMessage + 'error code: ' +  errorCode);
+      })
+}
+
+async function submitInfo(object) {
   try {
     const docRef = await addDoc(collection(db, "users"), object);
     console.log("Document written with ID: ", docRef.id);
@@ -45,26 +60,26 @@ function initSubmit() {
     formElem.addEventListener("formdata", (e) => {
       const date = new Date().toLocaleString("en-US");
       const data = e.formData;
-      let loc   = formElem.querySelector('select.location' ).value;
+      let locEl   = formElem.querySelector('select.location');
       let retunEl = formElem.querySelector('select.returning');
+      let loc = '';
+      if ( locEl ) loc = locEl.value;
       let retun = '';
       if ( retunEl ) retun = retunEl.value;
       
       data.append("location", loc);
       data.append("new-patient", retun);
       data.append("updated-time", date);
-      submitInfo(data);
+      var object = {};
+      data.forEach((value, key) => object[key] = value);
+      if(document.querySelector('#auth-form')) {
+        signinInfo(object);
+      } else {
+        submitInfo(object);
+      }
     });
   });
 }
 
 window.addEventListener("DOMContentLoaded", initSubmit);
 
-// function sendEmail(name, email, message) {
-//     email.send({
-//         Host: "smtp.gmail.com",
-//         Username: 'kbbss96@gmail.com',
-//         Password: 'acewrgjwsybbeiyt',
-//         To: "kbbss96@gmail.com",
-//     })
-// }
