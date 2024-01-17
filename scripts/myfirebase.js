@@ -27,10 +27,11 @@ var user = '';
 function signinInfo(data) {
       signInWithEmailAndPassword(auth, data['user-email'], data.password)
       .then((userCredential) => {
-          // Signed in
+          // Signed in          
           user = userCredential.user;
           alert('Hello ' + user.email + ' Nice!');
           alert(user.email)
+          window.localStorage.setItem('emailForSignIn', userCredential.user.email);
       })
       .catch((error) => {
           const errorCode = error.code;

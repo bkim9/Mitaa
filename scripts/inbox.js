@@ -21,8 +21,12 @@ const auth = getAuth(app);
 var currentUser = '';
 onAuthStateChanged(auth, user => {
     /* check status */
-    currentUser = user.email;
+    currentUser = window.localStorage.getItem('emailForSignIn');
+    if (window.localStorage.getItem('emailForSignIn')) {
+        // window.location = '/inbox.html';
+    }
  });
+
 // function clearItems(parent) {
 //     while (parent.hasChildNodes())
 //         parent.removeChild(parent.firstChild)
@@ -116,12 +120,12 @@ function display_items(data) {
 
 async function init() {
     if( document.querySelector('#inboxes-appointment') ) {
-        if (currentUser != '') {
-            alert(currentUser);
-            let data = await getDocs(collection(db, currentUser));    
-            display_items(data);
+        currentUser = window.localStorage.getItem('emailForSignIn');
+        if ( currentUser == 'kbs@mitaa.com') {
+                let data = await getDocs(collection(db, currentUser));  
+                display_items(data);  
         } else {
-            alert('Not Authorized to read the data');
+            console.log(window.localStorage.getItem('emailForSignIn'));
         }
     }
 }
