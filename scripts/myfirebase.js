@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc, getDoc} from "firebase/firestore"; 
 
 // Your web app's Firebase configuration
@@ -20,19 +20,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-onAuthStateChanged(auth, user => {
-   /* check status */
-    alert('check status') ;
-});
+var admin = 'kbs@mitaa.com';
+var user = '';
+
 
 function signinInfo(data) {
-      console.log(data);
       signInWithEmailAndPassword(auth, data['user-email'], data.password)
       .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-          alert('Hello Beomsu Nice!');
-          console.log(user);
+          user = userCredential.user;
+          alert('Hello ' + user.email + ' Nice!');
+          alert(user.email)
       })
       .catch((error) => {
           const errorCode = error.code;
@@ -43,7 +41,7 @@ function signinInfo(data) {
 
 async function submitInfo(object) {
   try {
-    const docRef = await addDoc(collection(db, "users"), object);
+    const docRef = await addDoc(collection(db, admin), object);
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {
     console.error("Error adding document: ", e);

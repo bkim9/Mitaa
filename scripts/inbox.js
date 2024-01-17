@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
 
 import { getFirestore } from "firebase/firestore";
-import { collection, getDocs} from "firebase/firestore"; 
+import { collection, getDocs} from "firebase/firestore";
+import { getAuth, onAuthStateChanged} from "firebase/auth"
 
 const firebaseConfig = {
     apiKey: "AIzaSyBAA028ZEhA_ylFS1zut-h9mvp5V6aoFw4",
@@ -15,7 +16,13 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
+const auth = getAuth(app);
 
+var currentUser = '';
+onAuthStateChanged(auth, user => {
+    /* check status */
+    currentUser = user.email;
+ });
 // function clearItems(parent) {
 //     while (parent.hasChildNodes())
 //         parent.removeChild(parent.firstChild)
@@ -108,8 +115,15 @@ function display_items(data) {
 }
 
 async function init() {
-    let data = await getDocs(collection(db, "users"));
-    display_items(data);
+    if( document.querySelector('#inboxes-appointment') ) {
+        if (currentUser != '') {
+            alert(currentUser);
+            let data = await getDocs(collection(db, currentUser));    
+            display_items(data);
+        } else {
+            alert('Not Authorized to read the data');
+        }
+    }
 }
 
 window.addEventListener("DOMContentLoaded", init);

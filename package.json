@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "firebase": "^9.23.0",
+    "firebase-admin": "^12.0.0",
     "firebaseui": "^6.1.0"
   },
   "devDependencies": {
