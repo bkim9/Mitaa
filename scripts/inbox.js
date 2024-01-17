@@ -121,9 +121,9 @@ function display_items(data) {
 async function init() {
     if( document.querySelector('#inboxes-appointment') ) {
         currentUser = window.localStorage.getItem('emailForSignIn');
-        if ( currentUser == 'kbs@mitaa.com') {
-                let data = await getDocs(collection(db, currentUser));  
-                display_items(data);  
+        if ( currentUser != '' ) {
+            let data = await getDocs(collection(db, currentUser));  
+            display_items(data);  
         } else {
             console.log(window.localStorage.getItem('emailForSignIn'));
         }
