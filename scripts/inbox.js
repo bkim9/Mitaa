@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 
-import { getFirestore } from "firebase/firestore";
-import { collection, getDocs} from "firebase/firestore";
+import { doc, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getDoc} from "firebase/firestore";
 import { getAuth, onAuthStateChanged} from "firebase/auth"
 
 const firebaseConfig = {
@@ -17,6 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db  = getFirestore(app);
 const auth = getAuth(app);
+var admin = '';
 
 var currentUser = '';
 onAuthStateChanged(auth, user => {
@@ -119,13 +120,14 @@ function display_items(data) {
 }
 
 async function init() {
+    admin =  (await getDoc(doc(db, 'users','manager'))).data();
     if( document.querySelector('#inboxes-appointment') ) {
         currentUser = window.localStorage.getItem('emailForSignIn');
-        if ( currentUser != '' ) {
+        if ( currentUser == admin.name ) {
             let data = await getDocs(collection(db, currentUser));  
             display_items(data);  
         } else {
-            console.log(window.localStorage.getItem('emailForSignIn'));
+            alert('Please sign in first.');
         }
     }
 }
