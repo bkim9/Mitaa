@@ -20,9 +20,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-var admin = (await getDoc(doc(db, 'users','manager'))).data();
+var admin = '';
 var user = '';
-
 
 function signinInfo(data) {
       signInWithEmailAndPassword(auth, data['user-email'], data.password)
@@ -30,8 +29,8 @@ function signinInfo(data) {
           // Signed in          
           user = userCredential.user;
           alert('Hello ' + user.email + ' Nice!');
-          alert(user.email)
           window.localStorage.setItem('emailForSignIn', userCredential.user.email);
+          window.location.href='./inbox.html';
       })
       .catch((error) => {
           const errorCode = error.code;
@@ -41,6 +40,7 @@ function signinInfo(data) {
 }
 
 async function submitInfo(object) {
+  admin = (await getDoc(doc(db, 'users','manager'))).data();
   try {
     const docRef = await addDoc(collection(db, admin), object);
     console.log("Document written with ID: ", docRef.id);
