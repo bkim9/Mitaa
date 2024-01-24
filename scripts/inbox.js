@@ -4,6 +4,8 @@ import { doc, getFirestore } from "firebase/firestore";
 import { collection, getDocs, getDoc} from "firebase/firestore";
 import { getAuth, onAuthStateChanged} from "firebase/auth"
 
+import { addDialog } from "./conv-dialog";
+
 const firebaseConfig = {
     apiKey: "AIzaSyBAA028ZEhA_ylFS1zut-h9mvp5V6aoFw4",
     authDomain: "mitaa-401922.firebaseapp.com",
@@ -110,6 +112,9 @@ function displayItem(item) {
             clone.querySelector('.location'   ).textContent = itemData.location.trim();
             clone.querySelector('.mobile'     ).textContent = itemData.mobile
             clone.querySelector('.note'       ).textContent = itemData.story
+            const dialogE = clone.querySelector('dialog');
+            dialogE.style.display = 'none';
+            addDialog( dialogE);
             appointmentInboxE.appendChild(clone);
         }
     }

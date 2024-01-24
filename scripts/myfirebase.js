@@ -40,7 +40,7 @@ function signinInfo(data) {
 }
 
 async function submitInfo(object) {
-  admin = (await getDoc(doc(db, 'users','manager'))).data();
+  admin = (await getDoc(doc(db, 'users','manager'))).data().name;
   try {
     const docRef = await addDoc(collection(db, admin), object);
     console.log("Document written with ID: ", docRef.id);

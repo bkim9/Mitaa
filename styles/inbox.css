@@ -1,11 +1,13 @@
 h2 {
     margin: 1rem;
 }
+
 .inbox-appointment, .note, .inbox-referral {
     width: 90vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
     padding: .4rem;
     border-radius: .5rem;
 }
@@ -17,7 +19,6 @@ h2 {
     min-height: 2rem;
 }
 
-
 .inbox-appointment > * {
     padding: .5rem;
     display: flex;
@@ -27,7 +28,8 @@ h2 {
 }
 
 .edit-button {
-    background-color: white;
+    background-color: gray;
+    padding: .1rem .25rem;
     width: 1.3rem;
     height: 1.3rem;
     border-radius: 1rem;

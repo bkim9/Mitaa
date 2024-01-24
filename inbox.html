@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/headerfooter.css">
     <link rel="stylesheet" href="./styles/inbox.css">
-
+    <link rel="stylesheet" href="./styles/conv-dialog.css">
+    
     <script src="./dist/bundle.js"></script>
+    <script src="./scripts/conv-dialog.js" type="module"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
@@ -20,7 +22,6 @@
     </template>
 
     <template id="inbox-appointment-template">
-      
       <ul class="inbox-appointment">
         <li class="update-time">12/13/2023, 10:43:32 AM</li>
         <li class="name">Sam Smith</li>
@@ -28,10 +29,39 @@
         <li class="email">info@mitaa.com</li>
         <li class="location">Los Angeles</li>
         <li class="mobile">4698184342</li>
-        <li class="edit-room"><button class="edit-button">✎</button></li>
+        
+        <dialog class="edit-dialog">
+          <button id="conv-close-button">x</button>
+          <div id="dialog-header">
+              <h3>Edit inbox</h3>
+          </div>
+          <form id="contact-form" action="/submit-p-form" method="dialog">
+              <select class="location">
+                  <option value="default">  Location</option>
+                  <option>Los Angeles</option>
+                  <option>UCLA</option>
+              </select>
+              <select class="returning">
+                  <option value="default">  Returning Patient?</option>
+                  <option>Yes, I am returning</option>
+                  <option>No, I am a new patient</option>
+              </select>
+              <input type="text" id="name" name="name" placeholder="Full Name">
+              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
+              <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
+              <input id="conv-submit-button" type="submit" value="Submit">
+          </form>
+          <p id="contact-warning">
+              By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
+          </p>
+        </dialog>
+        <button class="edit-button">✎</button>
       </ul>
       <span class="note">I have terrible neuropathy issue. The medication is not working right now. I need more advanced treatment than the one I am taking now.</span>
       
+
+
     </template>
 
     <template id="inbox-referral-template">
