@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="./styles/headerfooter.css">
     <link rel="stylesheet" href="./styles/map-card.css">
     <link rel="stylesheet" href="./styles/contacts.css">
-    <link rel="stylesheet" href="./styles/conv-dialog.css">  
+    <link rel="stylesheet" href="./styles/dialog.css">  
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
-    <script src="./scripts/conv-dialog.js" type="module"></script>
+    <script src="./scripts/dialog.js" type="module"></script>
     <script src="./scripts/map-card.js"></script>
     <script src="./dist/bundle.js"></script>
   </head>
@@ -107,7 +107,7 @@
               <input type="checkbox" id="consent-form" name="consent-form" />
               <label for="consent-form">I understand and agree that any information submitted will be forwarded to our office system not via a secure messaging system. This form should not be used to transmit private health information, and we disclaim all warranties with respect to the privacy and confidentiality of any information submitted through this form. I also acknowledge that appointments are not confirmed until speaking with someone at our office.</label>
             </div>
-            <input id="conv-submit-button" type="submit" value="Submit">
+            <input id="dialog-submit-button" type="submit" value="Submit">
           </div>
       </form>
 
@@ -126,8 +126,8 @@
       </div>
 
 
-      <dialog id="conv-dialog">
-        <button id="conv-close-button">x</button>
+      <dialog id="add-dialog">
+        <button id="dialog-close-button">x</button>
         <div id="dialog-header">
             <h3>Contact Us</h3>
         </div>
@@ -146,14 +146,14 @@
             <input type="email" id="email" name="email" placeholder="Email">
             <input type="tel" id="mobile" name="mobile" placeholder="Phone Number" pattern="^\d{10}$" required>
             <textarea id="story" name="story" rows="5" cols="33" placeholder="Message" autofocus></textarea>
-            <input id="conv-submit-button" type="submit" value="Submit">
+            <input id="dialog-submit-button" type="submit" value="Submit">
         </form>
         <p id="contact-warning">
             By clicking Send, I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>, and I consent to receiving text messages from this practice acknowledging that data rates may apply. Message frequency varies.
         </p>
     </dialog>
       
-    <button id="conv-open-button">
+    <button id="dialog-open-button">
         <svg
             viewBox="-10 -14 44 70" 
             width="100" height="100"

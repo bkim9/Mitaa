@@ -1,10 +1,8 @@
 import { initializeApp } from "firebase/app";
-
 import { doc, getFirestore } from "firebase/firestore";
 import { collection, getDocs, getDoc} from "firebase/firestore";
 import { getAuth, onAuthStateChanged} from "firebase/auth"
-
-import { addDialog } from "./conv-dialog";
+import { addDialog } from "./dialog";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBAA028ZEhA_ylFS1zut-h9mvp5V6aoFw4",
@@ -59,16 +57,16 @@ function displayItem(item) {
             // Clone
             console.log(template);
             const clone = template.content.cloneNode(true);
+
             clone.querySelector('.update-time').textContent = itemData["updated-time"];
             clone.querySelector('.patient-name').textContent = itemData['patient-fname'] + ' ' + itemData['patient-lname'];
             clone.querySelector('.location').textContent = itemData['location'];
-
+            
             clone.querySelector('.doctor-email').textContent = itemData['doctor-email'];
             clone.querySelector('.doctor-facility').textContent = itemData['doctor-facility'];
             clone.querySelector('.doctor-name').textContent = itemData['doctor-name'];
             clone.querySelector('.doctor-tel').textContent = itemData['doctor-tel'];
 
-            
             const gender = ( itemData['patient-male'] )? 'Male': 'Female';
 
             clone.querySelector('.patient-dob').textContent = itemData['patient-dob'];

@@ -2,7 +2,7 @@
   "name": "mitaa",
   "version": "1.0.0",
   "description": "",
-  "main": "./scripts/conv-dialog.js",
+  "main": "./scripts/dialog.js",
   "scripts": {
     "build": "webpack --mode=development"
   },
